@@ -1,0 +1,44 @@
+<?php 
+	$appliedBlockIds = $this->getAppliedBlockIds();
+	$array_sku= explode(",",$this->re_product_sku);
+	
+	$productobj=Mage::getModel('catalog/product');
+	$check= $this->checkSku($productobj,$array_sku);
+?>
+<?php if ($check==1):?>
+<div class="crosssell checkoutpromo">
+  <h2><?php echo $this->__('Related Products') ?></h2> 
+    <ul class="mw_co_products_list" id="crosssell-products-list">
+    <?php foreach($array_sku as $sku):?>
+    	<?php if (strcmp($sku, "")!=0):?>
+    		<?php $productid= $productobj->getIdBySku($sku);?>
+			<?php if ($productid):?>
+				<?php $model_product=Mage::getModel('catalog/product')->load($productid);?>
+				<?php 				
+					$linkimageproduct= $this->getImageUrl($model_product);
+					$product_name= $model_product->getdata("name");
+					$product_link= $this->getUrl($model_product->getUrlPath());
+				?>
+		        <li class="item">
+		            <a class="product-image" href="<?php echo($product_link);?>" title="<?php echo($product_link);?>">
+		            	<img src="<?php echo($linkimageproduct);?>" width="75" height="75" alt="<?php echo($product_link);?>" />
+		            </a>
+		            <div class="product-details">
+		                <h3 class="product-name">
+		                	<a href="<?php echo($product_link);?>" title="<?php echo $this->htmlEscape($product_name) ?>"><?php echo $this->htmlEscape($product_name) ?></a>
+		                </h3>
+		                <button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="button" onclick="setLocation('<?php echo $this->helper('checkout/cart')->getAddUrl($model_product) ?>')">
+							<span>
+								<span><?php echo $this->__('Add to Cart') ?></span>
+							</span>
+						</button>
+					</div>
+		        </li>
+        	<?php endif;?>
+        <?php endif;?>
+    <?php endforeach; ?>
+    </ul>
+	 <script type="text/javascript">decorateList('crosssell-products-list', 'none-recursive')</script>
+</div> 
+<?php endif;?>
+

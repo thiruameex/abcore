@@ -1,0 +1,42 @@
+
+<div class="clear"></div>
+
+<?php $news = $this->getNews();
+    if($news->count() < 1):
+?>
+	<div class="postWrapper">
+	<p><?php echo Mage::helper('cmspro')->__('Not found news'); ?></p>
+	</div>
+	<?php
+	    else:
+	    $newsThumbnailSize = $this->getNewsThumbnailSize();
+	?>
+	<div class="postWrapper">
+	<?php foreach ($news as $n): 
+		$url = Mage::getModel('core/url_rewrite')->load($n->getUrlRewriteId());
+		?>
+		<div class="cmspro_list_item">
+		    <div class="cmspro_list_content">
+		    	<div class="cmspro_list_images">
+				<img src="<?php echo $this->helper('cmspro/image')->init($n->getImages())->resize($newsThumbnailSize['width'], $newsThumbnailSize['height']) ?>" alt="<?php echo ('')?>"/></div>
+		    	<div class="cmspro_list_summary">					
+					<h3><a href="<?php echo Mage::getBaseUrl().$url->getRequestPath();?>"><?php echo $n->getTitle();?></a></h3>
+					<div class="posted-date"><?php echo Mage::helper('cmspro')->__('published at');?> <?php echo $n->getCreatedTime(); ?></div>
+					<div>
+						<?php echo substr($n->getSummary(),0,400)."..." ; ?>
+						<a href="<?php echo Mage::getBaseUrl().$url->getRequestPath();?>"><?php echo Mage::helper('cmspro')->__('More');?></a>
+					</div>
+		    	</div>
+				<div class="clear"></div>
+		    </div>
+		  
+	    </div>
+		  
+	<?php endforeach; ?>		
+		<?php 
+			echo $this->getToolbarHtml(); 
+		?> 
+	</div>
+<?php
+    endif;
+?>

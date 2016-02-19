@@ -1,0 +1,26 @@
+<?php
+
+class MW_EmailOrderForForeign_Helper_Data extends Mage_Core_Helper_Abstract
+{
+    public function getDistributorUrl(){
+        $block = Mage::app()->getLayout()->createBlock('ipchecker/ipchecker');       
+        $geoIp = $block->getGeoip();
+        $distributors = unserialize(Mage::getStoreConfig('emailorderforforeign/general/distributors'));
+        $link = null;
+        if(is_array($distributors)){
+            foreach($distributors as $distributor){
+                if(strcasecmp($distributor['distributor'], 'default') == 0){
+                    $defaulLink = $distributor['distributor_link'];
+                }
+                if(strcasecmp($geoIp[1], $distributor['distributor']) == 0){
+                    $link = $distributor['distributor_link'];
+                    break;
+                }
+            }
+            if(is_null($link)){
+                $link = $defaulLink;
+            }
+        }
+        return Mage::getBaseUrl().$link;
+    }
+}

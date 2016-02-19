@@ -1,0 +1,119 @@
+<script type="text/javascript"> 
+function addtocart() {
+	var cat = '';
+	var qty = '';
+	var i;
+	for(i=1; i<=5; i++){
+		cat += $('cat'+i).value;
+		qty += $('qty'+i).value;
+		if( i!=5 ){
+			cat += ',';
+			qty += ',';
+			}
+	}
+	var url = document.URL + '?products='+cat+'&qty='+qty;
+	window.location.href = url;
+}
+</script>
+
+
+
+<h4><?php echo 'Quick Order' ?></h4>
+<p>The Quick Order form is intended for our customers who prefer to shop directly by using product Cat#.</p>
+<p>Enter the Cat# and quantity to order product(s) and then click on add to cart.</p>
+<br/><br/>
+<table border="1">
+	<tr><th>Cat#</th><th>Quantity</th></tr>
+	<tr><td><input type="text" name="cat1" id="cat1"/></td><td><input type="text" name="qty1" id="qty1"/></td></tr>
+	<tr><td><input type="text" name="cat2" id="cat2"/></td><td><input type="text" name="qty2" id="qty2"/></td></tr>
+	<tr><td><input type="text" name="cat3" id="cat3"/></td><td><input type="text" name="qty3" id="qty3"/></td></tr>
+	<tr><td><input type="text" name="cat4" id="cat4"/></td><td><input type="text" name="qty4" id="qty4"/></td></tr>
+	<tr><td><input type="text" name="cat5" id="cat5"/></td><td><input type="text" name="qty5" id="qty5"/></td></tr>
+</table>
+<br/>
+<div class="actions">
+	<button onclick="addtocart()" class="button btn-cart" title="Add to Cart" type="button"><span><span>Add to Cart</span></span></button>
+	<!--<button onclick='alert(getCartParams()[0])' class="button btn-cart" title="Add to Cart" type="button"><span><span>Add to Cart</span></span></button>
+--></div>
+<?php 
+/*include_once 'app/Mage.php';
+Mage::app();
+Mage::getSingleton('core/session', array('name' => 'frontend'));*/
+
+$session = Mage::getSingleton('checkout/session');
+if($this->getRequest()->getParam('products'))
+    	{
+	    	$params['cat'] = explode(',', $this->getRequest()->getParam('products'));
+	 		$params['qty'] = explode(',', $this->getRequest()->getParam('qty'));
+	 		$cart = Mage::getModel('checkout/cart');
+			$cart->init();
+	 		$qtySum = 0;
+	 		
+			for ($i=0;$i<=5;$i++) {
+				//get id from cat
+				if ($params['cat'][$i] == '') continue;
+	 			$product = Mage::getModel('catalog/product');
+				$pId = $product->loadByAttribute('cat',$params['cat'][$i])->getId();
+				
+				if($pId)
+				{ 
+					$product->setStoreId(Mage::app()->getStore()->getId())->load($pId);
+					if ($product->getTypeId() == Mage_Catalog_Model_Product_Type::TYPE_SIMPLE) {
+						try 
+						{   
+							//if quantity is not valid (negative number or 0,NaN)then set quantity to 1
+							$configurableProduct = Mage::getModel('catalog/product_type_configurable');
+							$parentIdArray = $configurableProduct->getParentIdsByChild($pId);
+						    
+						    //if simple product belong to configurable product
+						    if (!empty($parentIdArray))
+						    {
+						        $parentProduct = Mage::getModel('catalog/product')->load($parentIdArray[0]);
+							    if($parentProduct->getTypeId() == 'configurable' )
+								{
+									
+									//get configurable attributes of the parent
+							        $tempattr = $parentProduct->getTypeInstance()->getConfigurableAttributes();
+							        foreach ($tempattr as $attr)
+							        {    
+							            //save in set
+							            $configurableSet[] = $attr->getProductAttribute()->getId();                    
+							        }
+							                   
+									$attributes = $product->getAttributes();
+									$i = 0;
+									$options = array();
+									foreach ($attributes as $attribute)
+									{
+									    if (in_array($attribute->getId(),$configurableSet))
+									    {                        
+								        	$labelID = $attribute->getId();
+									        $valueID = $product->getData($attribute->getAttributeCode());
+							                $options[$labelID] = $valueID;
+									    }
+									}
+									$product = $parentProduct;
+									$pId = $parentIdArray[0];
+								 }
+						    }
+							$cart->addProduct($product, array('product'=> $pId,'qty' => $params['qty'][$i],'super_attribute' => $options));
+
+						    //calculate total product added
+							if(is_numeric($params['qty'][$i]) && $params['qty'][$i]>= 0)
+							{
+								$qtySum += $params['qty'][$i];
+							}else $qtySum += 1;
+						}
+						catch (Exception $e) { continue; }
+					}
+				}
+			}
+			$cart->save();
+			//Mage::getSingleton('checkout/session')->setCartWasUpdated(true);
+	 
+			if ($this->getRequest()->isXmlHttpRequest()) {
+				exit('1');
+			}
+	 		$session->addSuccess((int)$qtySum.' item(s) was added to shopping cart.');
+			echo "<script type='text/javascript'>window.location.href ='".Mage::getUrl('checkout/cart')."'</script>";    	}
+?>

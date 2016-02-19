@@ -1,0 +1,9 @@
+.mw_co_product_image_tag{
+	max-height:141px;
+	max-width:167px
+}
+.mw_co_product{
+	float:left;
+	border:1px solid black;
+	width:298px;
+}

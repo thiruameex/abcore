@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<config>
+	<tabs>
+        <mageworld translate="label">
+            <label>Mage World</label>
+            <sort_order>100</sort_order>
+        </mageworld>
+    </tabs>
+    <sections>
+        <ipchecker translate="label" module="ipchecker">
+            <label>Ip Checker</label>
+            <tab>mageworld</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>300</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>                
+                <info translate="label">
+                    <label>General</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+						<enabled translate="label">
+                            <label>Enable IP Checker</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model> 
+                            <sort_order>30</sort_order>
+                            <show_in_default>2</show_in_default>
+                            <show_in_website>2</show_in_website>
+                            <show_in_store>2</show_in_store>
+                       </enabled>					     
+						<checksetup translate="comment">
+                            <label>Manage IPchecker Rules</label>
+                            <frontend_model>MW_ipchecker_block_setup</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>2</show_in_default>
+                            <show_in_website>2</show_in_website>
+                            <show_in_store>2</show_in_store>							
+                        </checksetup>
+						<!-- <hidestoreview translate="label">
+                            <label>Hide Storeview Swichbox</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model> 
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                       </hidestoreview> -->
+					   <!-- <hidecurrency ranslate="label">
+                            <label>Hide Currency Switchbox</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model> 
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                       </hidecurrency> -->
+					  <!--  <autoswitch ranslate="label">
+                            <label>Switch mode</label>
+                            <frontend_type>select</frontend_type>
+                           <source_model>ipchecker/Switchmode</source_model>
+                            <sort_order>9</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                       </autoswitch> -->
+					  <!--  <urlexception translate="label">                          
+                            <label>Manage URLs Exception</label>
+                            <frontend_model>MW_ipchecker_block_url</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>2</show_in_default>
+                            <show_in_website>2</show_in_website>
+                            <show_in_store>2</show_in_store>                      
+                        </urlexception> -->
+						<ipexception translate="label">                          
+                            <label>Manage IPs Exception</label>
+                            <frontend_model>MW_ipchecker_block_ip</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+							 <comment>Please use character ' - ' when you input an IP Range .Example : 24.56.78.86-233</comment>
+                            <sort_order>5</sort_order>
+                            <show_in_default>2</show_in_default>
+                            <show_in_website>2</show_in_website>
+                            <show_in_store>2</show_in_store>                      
+                        </ipexception>
+						<!-- <agentexception translate="label">                          
+                            <label>User Agent List</label>
+                            <frontend_model>MW_ipchecker_block_agent</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>2</show_in_default>
+                            <show_in_website>2</show_in_website>
+                            <show_in_store>2</show_in_store>                      
+                        </agentexception> -->
+						<!-- <online ranslate="label">
+                            <label>Check IP Base on APIs online</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model> 
+                            <sort_order>16</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<comment>APIs is provided online and it's database is updated frequently </comment>
+                       </online> -->
+                    </fields>
+                </info>
+				<!--	<author_information translate="label">
+                    <label>Author Information</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <comment>The IPChecker Extension is developed and supported by &lt;a href="http://www.mage-world.com/"&gt;www.Mage-World.com&lt;/a&gt;.
+							 If you need any support or have any question, please contact us at &lt;a href="mailto:support@mage-world.com"&gt;support@mage-world.com.&lt;/a&gt;
+                    </comment>
+                </author_information>-->
+            </groups>
+        </ipchecker>
+    </sections>
+</config>

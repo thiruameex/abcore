@@ -1,0 +1,14 @@
+<?php $con = Mage::getSingleton('core/session')->getForeigncustomer();
+			if(($con==1)&&(Mage::getStoreConfig('ipchecker/info/enabled')==1)):?>
+<script type="text/javascript"> 
+jQuery.noConflict();
+jQuery(".btn-cart").html('');
+jQuery(".add-to-cart").html('');
+jQuery(".btn-add").html('');
+jQuery(".link-cart").html('');
+ jQuery(".block-layered-nav").html('');
+/*jQuery(".link-cart").html('');
+jQuery(".link-cart").html('');
+jQuery(".link-cart").html(''); */
+</script>
+<?php endif;?>

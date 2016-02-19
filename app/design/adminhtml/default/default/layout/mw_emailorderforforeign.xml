@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <hdemailorderforforeign_adminhtml_distributor_index>
+        <reference name="content">
+            <block type="emailorderforforeign/adminhtml_distributor" name="emailorderforforeign" />
+        </reference>
+    </hdemailorderforforeign_adminhtml_distributor_index>
+    
+</layout>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Maven_AdvanceImport>
+            <version>0.1.0</version>
+        </Maven_AdvanceImport>
+    </modules>
+    <frontend>
+        <routers>
+            <advanceimport>
+                <use>standard</use>
+                <args>
+                    <module>Maven_AdvanceImport</module>
+                    <frontName>advanceimport</frontName>
+                </args>
+            </advanceimport>
+        </routers>
+        <layout>
+            <updates>
+                <advanceimport>
+                    <file>advanceimport.xml</file>
+                </advanceimport>
+            </updates>
+        </layout>
+    </frontend>
+   
+     
+    <global>
+        <models>
+            <advanceimport>
+                <class>Maven_AdvanceImport_Model</class>                
+            </advanceimport>
+			<catalog>
+                <rewrite>
+                    <convert_adapter_product>Maven_AdvanceImport_Model_Convert_Adapter_Abstract</convert_adapter_product>
+                </rewrite>
+			</catalog>
+        </models>
+		<advanceimport>
+            <importtype>
+				<related>
+					<class>advanceimport/convert_adapter_relatedimport</class>
+				</related>				
+            </importtype>            
+        </advanceimport>
+		
+    </global>
+</config>

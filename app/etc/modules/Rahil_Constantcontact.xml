@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Rahil_Constantcontact>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Rahil_Constantcontact>
+    </modules>
+</config> 

@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <MW_EmailOrderForForeign>
+            <version>0.1.0</version>
+        </MW_EmailOrderForForeign>
+    </modules>
+    <frontend>
+        <routers>
+            <emailorderforforeign>
+                <use>standard</use>
+                <args>
+                    <module>MW_EmailOrderForForeign</module>
+                    <frontName>emailorderforforeign</frontName>
+                </args>
+            </emailorderforforeign>
+        </routers>
+        <layout>
+            <updates>
+                <emailorderforforeign>
+                    <file>mw_emailorderforforeign.xml</file>
+                </emailorderforforeign>
+            </updates>
+        </layout>
+    </frontend>
+    <admin>
+        <routers>
+            <hdemailorderforforeign>
+                <use>admin</use>
+                <args>
+                    <module>MW_EmailOrderForForeign</module>
+                    <frontName>hdemailorderforforeign</frontName>
+                </args>
+            </hdemailorderforforeign>
+        </routers>
+    </admin>
+    <adminhtml>	
+        <layout>
+            <updates>
+                <emailorderforforeign>
+                    <file>mw_emailorderforforeign.xml</file>
+                </emailorderforforeign>
+            </updates>
+        </layout>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children> 
+                        <MW_EmailOrderForForeign>
+                            <title>Country Mapping</title>
+                            <sort_order>10</sort_order>
+                        </MW_EmailOrderForForeign>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <emailorderforforeign translate="title" module="emailorderforforeign">
+                                            <title>International Order Form</title>
+                                        </emailorderforforeign>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+        <menu>
+            <emailorderforforeign module="emailorderforforeign">
+                <title>Country Mapping</title>
+                <sort_order>71</sort_order>               
+                <children>
+                    <distributor module="emailorderforforeign">
+                        <title>Mapping Country to Distributor</title>
+                        <sort_order>0</sort_order>
+                        <action>hdemailorderforforeign/adminhtml_distributor</action>
+                    </distributor>
+                </children>
+            </emailorderforforeign>
+        </menu>
+    </adminhtml>   
+    <global>
+        <models>
+            <emailorderforforeign>
+                <class>MW_EmailOrderForForeign_Model</class>
+                <resourceModel>emailorderforforeign_mysql4</resourceModel>
+            </emailorderforforeign>
+            <emailorderforforeign_mysql4>
+                <class>MW_EmailOrderForForeign_Model_Mysql4</class>
+                <entities>
+                    <distributor>
+                        <table>mw_distributor</table>
+                    </distributor>
+                </entities>
+            </emailorderforforeign_mysql4>
+        </models>
+        <resources>
+            <emailorderforforeign_setup>
+                <setup>
+                    <module>MW_EmailOrderForForeign</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </emailorderforforeign_setup>
+            <emailorderforforeign_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </emailorderforforeign_write>
+            <emailorderforforeign_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </emailorderforforeign_read>
+        </resources>
+        <blocks>
+            <emailorderforforeign>
+                <class>MW_EmailOrderForForeign_Block</class>
+            </emailorderforforeign>
+        </blocks>
+        <helpers>
+            <emailorderforforeign>
+                <class>MW_EmailOrderForForeign_Helper</class>
+            </emailorderforforeign>
+        </helpers>
+        <template>
+            <email>
+                <emailorderforforeign_general_email_template translate="label" module="emailorderforforeign">
+                    <label>Email Order Template</label>
+                    <file>mw_emailorderforforeign/email_template.html</file>
+                    <type>html</type>
+                </emailorderforforeign_general_email_template>
+                <emailorderforforeign_general_notify_customer_template translate="label" module="emailorderforforeign">
+                    <label>Notification Email Template For Foreigner</label>
+                    <file>mw_emailorderforforeign/notify_customer_template.html</file>
+                    <type>html</type>
+                </emailorderforforeign_general_notify_customer_template>
+            </email>
+        </template>
+    </global>
+    <default>
+        <emailorderforforeign>
+            <general>
+                <enabled>1</enabled>
+                <allowed_product_total>5</allowed_product_total>
+                <subject>Order from foreigner</subject>
+                <notification_subject>Re: Order from foreigner</notification_subject>
+                <order_description>Order description</order_description>
+				<email_template>emailorderforforeign_general_email_template</email_template>
+				<notify_customer_template>emailorderforforeign_general_notify_customer_template</notify_customer_template>
+            </general>
+			<distributor>
+				<default_link>home</default_link>
+			</distributor>
+        </emailorderforforeign>
+    </default>
+</config>

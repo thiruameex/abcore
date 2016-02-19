@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Rahil_Constantcontact>
+            <version>1.0.3</version>
+        </Rahil_Constantcontact>
+    </modules>
+  <!--  <frontend>
+        <routers>
+            <constantcontact>
+                <use>standard</use>
+                <args>
+                    <module>Rahil_Constantcontact</module>
+                    <frontName>constantcontact</frontName>
+                </args>
+            </constantcontact>
+        </routers>
+    </frontend>-->
+	<frontend>
+      <routers>
+         <newsletter>
+            <args>
+               <modules>
+                  <Rahil_Constantcontact before="Mage_Newsletter">Rahil_Constantcontact</Rahil_Constantcontact>
+               </modules>
+            </args>
+         </newsletter>
+      </routers>
+   </frontend>
+	
+    <adminhtml>
+	
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+					<children>
+						<Rahil_Constantcontact>
+							<title>Constantcontact Module</title>
+							<sort_order>10</sort_order>
+						</Rahil_Constantcontact>
+						<system>
+							<children>
+								<config>
+									<children>
+										<constantcontact translate="title" module="constantcontact"> 
+											<title>Constantcontact Settings</title>
+											<sort_order>50</sort_order>
+										</constantcontact>
+									</children>							
+								</config>
+							</children>
+						</system>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+	</adminhtml>   
+    <global>
+	  <models>
+            <constantcontact>
+                <class>Rahil_Constantcontact_Model</class>
+            </constantcontact>
+		</models>		
+        <helpers>
+            <constantcontact>
+                <class>Rahil_Constantcontact_Helper</class>
+            </constantcontact>
+        </helpers>
+    </global>
+</config>

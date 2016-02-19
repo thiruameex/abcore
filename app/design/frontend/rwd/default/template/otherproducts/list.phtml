@@ -1,0 +1,81 @@
+<?php 
+	 $_productcollects = $this->_productcollection(); /*** ProductCollection ***/
+	// $_productcollects->getSelect()->limit(4);
+?>
+<div class="otherproducts block">
+	<div class="block-title">
+		<?php echo $this->__('Other Products Brought With This :')?>
+	</div>
+ 	<div>
+ 		<p class="block-subtitle">
+ 			<?php echo $this->__('Check items to add to the cart or') ?>&nbsp;<a href="#" onclick="selectAllOthers(this); return false;"><?php echo $this->__('select all') ?></a>
+ 			<button type="button" title="<?php echo 'Add To Cart'?>" id="product-addtocart-button" class="button btn-cart" onclick="productAddToCartForm.submit(this)" style="float:right"><span><span><?php echo 'Add To Cart' ?></span></span></button>
+ 		</p>
+ 		<div style="clear:both"></div>
+	 	<ul>
+		 <?php $i=1; foreach ($_productcollects as $_productcollect) {
+		 	if(!$_productcollect->isComposite() && $_productcollect->isSaleable()):
+		 ?>
+			<li>
+				<?php if ($_productcollect->getVisibility() == '1'){
+						$parentIds = Mage::getResourceSingleton('catalog/product_type_configurable')
+	                  				->getParentIdsByChild($_productcollect->getId());
+	                  	$parenturl= Mage::getModel('catalog/product')->load($parentIds)->getProductUrl();?>
+	                  		<a href="<?php echo $parenturl?>" class="product-image"><img src="<?php echo $_productcollect->getImageUrl()?>" width="200"/></a>
+	              <?php }
+	                  else{?>
+	                  	<a href="<?php echo $_productcollect->getProductUrl()?>" class="product-image"><img src="<?php echo $_productcollect->getImageUrl()?>" width="200"/></a>
+	                 <?php  }
+	            ?>
+				<div class="product-detail">
+					<h4><?php echo $_productcollect->getName();?></h4>
+					<div class="price-box"><?php echo $_productcollect->getPrice();?></div>
+					<?php //if(!$_productcollect->isComposite() && $_productcollect->isSaleable()): ?>
+	                    <?php if (!$_productcollect->getRequiredOptions()): ?>
+	                        <input type="checkbox" class="checkbox others-checkbox" id="others-checkbox<?php echo $_productcollect->getId() ?>" name="others_products[]" value="<?php echo $_productcollect->getId() ?>" />
+	                    <?php endif; ?>
+	                <?php //endif; ?>
+				</div>
+			</li<?php $i++;if($i=='5') break;?>>
+		 <?php endif; } ?>
+
+		</ul>
+	</div>
+</div>
+
+<script type="text/javascript">
+    //<![CDATA[
+    $$('.others-checkbox').each(function(elem){
+        Event.observe(elem, 'click', addOthersToProduct)
+    });
+
+    var othersProductsCheckFlag = false;
+    function selectAllOthers(txt){
+        if (othersProductsCheckFlag == false) {
+            $$('.others-checkbox').each(function(elem){
+                elem.checked = true;
+            });
+            othersProductsCheckFlag = true;
+            txt.innerHTML="<?php echo Mage::helper('core')->jsQuoteEscape($this->__('unselect all')) ?>";
+        } else {
+            $$('.others-checkbox').each(function(elem){
+                elem.checked = false;
+            });
+            othersProductsCheckFlag = false;
+            txt.innerHTML="<?php echo Mage::helper('core')->jsQuoteEscape($this->__('select all')) ?>";
+        }
+        addOthersToProduct();
+    }
+
+    function addOthersToProduct(){
+        var checkboxes = $$('.others-checkbox');
+        var values = [];
+        for(var i=0;i<checkboxes.length;i++){
+            if(checkboxes[i].checked) values.push(checkboxes[i].value);
+        }
+        if($('related-products-field')){
+            $('related-products-field').value = values.join(',');
+        }
+    }
+    //]]>
+    </script>

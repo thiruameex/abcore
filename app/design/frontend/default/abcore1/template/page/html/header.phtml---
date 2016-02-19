@@ -1,0 +1,124 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+/**
+ * @var Mage_Page_Block_Html_Header $this
+ */
+?>
+<div class="header-container">
+	<a name="top"></a>
+    <div class="header">
+		<?php if ($this->getIsHomePage()):?>
+        <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
+        <?php else:?>
+        <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
+        <?php endif?>
+        <div class="quick-access">
+		    <?php echo $this->getChildHtml('topLinks') ?>
+			<div class="clear-both"></div>
+			<div class="top-serach-ps">
+				  <div class="search-ab">
+					       <?php //echo $this->getChildHtml('topSearch') ?>
+						   
+						 <div class="bg-right-search"></div>
+						   <div class="form-search-a">
+								
+						
+								<div id="cse-search-form" style="width: 100%;">Loading</div>
+							<?php if($_SERVER["HTTPS"]=="on") {?>		
+
+								<script src="https://www.google.com/jsapi" type="text/javascript"></script>
+								<script type="text/javascript"> 
+								google.load('search', '1', {language : 'en'});
+								google.setOnLoadCallback(function() {
+								var customSearchControl = new google.search.CustomSearchControl('015608304012857016470:gqd5ikclqb0');
+								customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+								var options = new google.search.DrawOptions();
+								options.enableSearchboxOnly("http://www.cytoskeleton.com/search");
+								customSearchControl.draw('cse-search-form', options);
+								}, true);
+								</script>
+								<link rel="stylesheet" href="https://www.google.com/cse/style/look/default.css" type="text/css" />
+								<style type="text/css">
+								input.gsc-input {
+								border-color: #BCCDF0;
+								}
+								input.gsc-search-button {
+								border-color: #666666;
+								background-color: #CECECE;
+								}
+								</style>
+						
+							<?php } 
+							 else	{?>	
+							<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+								<script type="text/javascript"> 
+								google.load('search', '1', {language : 'en'});
+								google.setOnLoadCallback(function() {
+								var customSearchControl = new google.search.CustomSearchControl('009288097452547138496:gqd5ikclqb0');
+								customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+								var options = new google.search.DrawOptions();
+								options.enableSearchboxOnly("http://www.cytoskeleton.com/search");
+								customSearchControl.draw('cse-search-form', options);
+								}, true);
+								</script>
+								<link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" />
+								<style type="text/css">
+								input.gsc-input {
+								border-color: #BCCDF0;
+								}
+								input.gsc-search-button {
+								border-color: #666666;
+								background-color: #CECECE;
+								}
+								</style>
+							<?php } ?>			
+							</div>
+							
+							  <div class="bg-left-search"></div>
+						    <div class="clear-both"></div>
+				  </div>
+			</div>
+			<div class="clear-both"></div>
+        </div>
+        <?php echo $this->getChildHtml('topContainer'); ?>
+    </div>
+</div>
+<div class="menu-container">
+<div class="menu-links">
+	<div class="links-info">
+		<?php echo $this->getChildHtml('topMenu') ?>
+	</div>
+  <div class="usa">
+     <?php /* <img src="<?php echo $this->getSkinUrl('images/usa.gif');?>"/> */?>
+	  <?php echo $this->getChildHtml('store_language') ?>
+  </div>
+  <div class="clear-both"></div>
+</div>
+</div>
+
+
+
+

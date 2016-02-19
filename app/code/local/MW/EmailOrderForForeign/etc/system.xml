@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <tabs>
+        <mageworld translate="label">
+            <label>Mage World</label>
+            <sort_order>300</sort_order>
+        </mageworld>
+    </tabs>
+    <sections>
+        <emailorderforforeign translate="label">
+            <label>International Order Form</label>
+            <tab>mageworld</tab><!-- Tham chieu den ten bat ky mageworld o tren -->
+            <frontend_type>text</frontend_type>
+            <sort_order>100</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label">
+                    <label>International Order Form</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label">
+                            <label>Enable</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <email_for_order translate="label">
+                            <label>Email for ordering</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <validate>validate-email required-entry</validate>
+                        </email_for_order>
+						<bcc translate="label">
+                            <label>Bcc</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>21</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <validate>validate-email</validate>
+                        </bcc>
+                        <subject translate="label">
+                            <label>Subject for order email</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </subject>
+                        <notification_subject translate="label">
+                            <label>Subject for notification email</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>41</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </notification_subject>
+                        <order_description translate="label">
+                            <label>Order description</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </order_description>
+                        <allowed_product_total translate="label">
+                            <label>Total of allowed product</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </allowed_product_total>
+                        <email_template translate="label">
+                            <label>Admin Notification Email Template</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_email_template</source_model> 
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </email_template>
+                        <notify_customer_template translate="label">
+                            <label>Foreigner Notification Email Template</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_email_template</source_model> 
+                            <sort_order>61</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </notify_customer_template>
+                    </fields>
+                </general>
+				<distributor>
+					<label>Distributor's link</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>7</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+					<fields>
+						<default_link>
+                            <label>Distributor's default link</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>CMS page's URL Key</comment>
+                        </default_link>
+					</fields>
+				</distributor>
+            </groups>
+        </emailorderforforeign>
+    </sections>
+</config>

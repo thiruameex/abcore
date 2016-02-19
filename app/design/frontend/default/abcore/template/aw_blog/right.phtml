@@ -1,0 +1,67 @@
+<div class="smart-menu-top"></div>
+<div class="block block-blog">
+      <div class="block-title">
+         <h3><?php echo $this->__('News & Updates');?></h3>
+      </div>
+<?php
+function subwords($str, $int, $strAppend='...') {
+    if (strlen($str) > $int) {
+        $arr = str_word_count($str, 2);
+        $blubb = false;
+        foreach ($arr as $intPos => $strWord) {
+            if ($blubb) return substr($str, 0, $intPos).$strAppend;
+                if ($intPos > $int) $blubb = true;
+        }
+    }
+ 
+    return $str;
+}
+$numberpost = 0;
+ ?>
+     <div class="block-content blog-mr">
+        <?php if ($this->getPosts()): ?>
+            <div class="recent-posts">
+                <ul>
+                <?php $posts = $this->getPosts(); ?>
+                <?php foreach ($posts as $post): ?>
+                <li class="">
+                   <div class="blog-bg">
+                     <?php /*?><div class="date-time">
+                         <?php //echo $tomorrow = date('d/m/y'); ?> ?>
+                           <?php 
+list($day, $time)= split(' ', $post->getCreatedTime());
+echo $day; ?>
+                         
+                      </div><?php */?>
+                        <?php /*<h5><a href="<?php echo $post->getAddress(); ?>"><?php echo $post->getTitle();?></a></h5> */?>
+                        <div class="postContent">
+                            <div class="blog-image-right">
+                                <?php if($post->getImage() != null || $post->getImage() != ""):?>
+                                    <a href="<?php echo $post->getAddress();?>"><img src="<?php echo Mage::getBaseUrl('media').$post->getImage() ?>" alt="<?php echo $post->getTitle() ?>"/></a>
+                                <?php endif;?>
+                            </div>
+                            <div class="blog-title-right">
+                                <a href="<?php echo $post->getAddress();?>"><?php 
+                                    $tmpstr = strip_tags($post->getTitle());
+                                    echo subwords($tmpstr,100,'...');
+                                ?></a>
+                                <span class="read-more"><a href="<?php echo $post->getAddress();?>"><?php echo $this->__('');?></a></span>
+                            </div>
+                             <?php /*<span class="read-more-title">of <?php echo $post->getTitle();?></span> */?>
+                        </div>
+                    </div>
+                </li>
+        <?php
+$numberpost ++;
+
+if($numberpost>2) break;
+        
+ endforeach; ?>
+                   </ul>
+				   <div class="more-links"><a href="<?php echo Mage::getUrl('blog');?>"><?php echo $this->__('More News & Updates');?></a></div>
+            </div><!-- / .recent-posts -->
+        <?php endif; ?>
+        </div><!-- /.content -->
+    
+</div>
+<div class="smart-menu-bottom"></div>

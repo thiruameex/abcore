@@ -1,0 +1,334 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+/**
+ * @var Mage_Page_Block_Html_Header $this
+ */
+?>
+<div class="header-container">
+	<a name="top"></a>
+    <div class="header container ">
+		<div class="row">
+			<?php if ($this->getIsHomePage()):?>
+			<div class="col-xs-12 col-sm-5 "><h1 class="logo"><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1></div>
+			<?php else:?>
+			<div class="col-xs-12 col-sm-5 "><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></div>
+			<?php endif?>
+			<div class="quick-access col-xs-12 col-sm-7 ">
+				<?php echo $this->getChildHtml('topLinks') ?>
+				<div class="clear-both"></div>
+				
+				<div class="clear-both"></div>
+				<?php echo $this->getChildHtml("cart_sidebar")?>
+			</div>
+			<?php echo $this->getChildHtml('topContainer'); ?>
+		</div>
+    </div>
+	
+</div>
+<div class="menu-container">
+<div class="menu-links container">
+    <div class="row">
+    <div class="top-serach-ps col-xs-12 col-sm-4">
+				  <div class="search-ab">
+					       <?php //echo $this->getChildHtml('topSearch') ?>
+						   
+						 <div class="bg-right-search"></div>
+						   <div class="form-search-a">
+								
+						
+								<div id="cse-search-form" style="width: 100%;">Loading</div>
+							<?php if( isset( $_SERVER["HTTPS"] ) && strtolower( $_SERVER["HTTPS"] ) == "on") {?>		
+
+								<script src="https://www.google.com/jsapi" type="text/javascript"></script>
+								<script type="text/javascript"> 
+								google.load('search', '1', {language : 'en'});
+								google.setOnLoadCallback(function() {
+								var customSearchControl = new google.search.CustomSearchControl('015608304012857016470:gqd5ikclqb0');
+								customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+								var options = new google.search.DrawOptions();
+								options.enableSearchboxOnly("http://www.cytoskeleton.com/search");
+								customSearchControl.draw('cse-search-form', options);
+								}, true);
+								</script>
+								<link rel="stylesheet" href="https://www.google.com/cse/style/look/default.css" type="text/css" />
+								<style type="text/css">
+								input.gsc-input {
+								border-color: #BCCDF0;
+								}
+								input.gsc-search-button {
+								border-color: #666666;
+								background-color: #CECECE;
+								}
+								</style>
+						
+							<?php } 
+							 else	{?>	
+							<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+								<script type="text/javascript"> 
+								google.load('search', '1', {language : 'en'});
+								google.setOnLoadCallback(function() {
+								var customSearchControl = new google.search.CustomSearchControl('015608304012857016470:gqd5ikclqb0');
+								customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+								var options = new google.search.DrawOptions();
+								options.enableSearchboxOnly("http://www.cytoskeleton.com/search");
+								customSearchControl.draw('cse-search-form', options);
+								}, true);
+								</script>
+								<link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" />
+								<style type="text/css">
+								input.gsc-input {
+								border-color: #BCCDF0;
+								}
+								input.gsc-search-button {
+								border-color: #666666;
+								background-color: #CECECE;
+								}
+								</style>
+							<?php } ?>			
+							</div>
+							
+							  <div class="bg-left-search"></div>
+						    <div class="clear-both"></div>
+				  </div>
+			</div>
+		<div class="links-info col-xs-12 col-sm-8">
+			<?php echo $this->getChildHtml('topMenu') ?>
+		</div>
+  <div class="clear-both"></div>
+  </div>
+</div>
+</div>
+<?php if ($this->getIsHomePage()):?>
+<div class="banner"><div class="line top"></div> <div class="line bottom"></div><div class="banner-content container"<?php echo $this->getLayout()->createBlock("slideshow/slideshow")->setTemplate("slideshow/slideshow.phtml")->toHtml(); ?></div></div>
+<?php endif?>
+<script type="text/javascript">
+
+
+	// var i = 0;
+	// jQuery(document).ready(function(){
+	// 	if((jQuery(window).height("1024")&&jQuery(window).width("768"))){
+		
+	// 	jQuery(".yellow-arrow").click(function()
+	// 	{
+	// 		jQuery(this).parent().next().toggleClass("front back");
+	// 	});
+	// 	}
+	    
+		
+	// 		var ss =jQuery("#theMenu_acc").find("span.selected");
+	// 		jQuery(ss).parent().addClass("active-li");
+	// 		jQuery(".catalog-category-view .all-info_category p").filter(function(){
+	// 				 	return  jQuery.trim(this.innerHTML) === "&nbsp;"
+	// 			  }).remove();
+	// 		jQuery(".catalog-product-view .product-view p").filter(function(){
+	// 				 	return  jQuery.trim(this.innerHTML) === "&nbsp;"
+	// 			  }).remove();
+	// 		jQuery("#product_tabs_1_contents h3").filter(function(){
+	// 				 	return  jQuery.trim(this.innerHTML) === "&nbsp;"
+	// 			  }).remove();
+	// 	    jQuery(".catalog-category-view .product-tabs-content p span").filter(function(){
+	// 				 	return  jQuery.trim(this.innerHTML) === "&nbsp;"
+	// 			  }).remove();
+	// 		// jQuery(".catalog-category-view .product-tabs-content p  br").filter(":empty").remove();		
+	// 		jQuery(".catalog-category-view .product-tabs-content p  strong").filter(":empty").remove();
+	// 		jQuery(".catalog-category-view .product-tabs-content p  em").filter(":empty").remove();						
+	// 		jQuery(".catalog-category-view .product-tabs-content p span br").filter(":empty").remove();		
+	// 		jQuery(".catalog-category-view .product-tabs-content p span ").filter(":empty").remove();
+	// 		jQuery(".catalog-category-view .product-tabs-content p").filter(":empty").remove();			
+	// 		jQuery(".catalog-category-view .product-tabs-content h4 hr").filter(":empty").remove();
+	// 		jQuery(".catalog-category-view .product-tabs-content h4").filter(function(){
+	// 				 	return  jQuery.trim(this.innerHTML) === "&nbsp;"
+	// 			   }).remove();	   	
+	// 		jQuery(".all-info_category h2").filter(":empty").remove();
+	// 		jQuery(".all-info_category h3").filter(":empty").remove();
+	// 		jQuery(".all-info_category #product_tabs_3_contents h4").filter(":empty").remove();
+	// 		jQuery("#product_tabs_1_contents h3").filter(":empty").remove();
+	
+	// 		jQuery( ".catalog-product-view #product_tabs_1_contents table" ).wrap( "<div class='category-table'></div>" );
+	// 		jQuery( ".cms-page-view  .std  table" ).wrap( "<div class='category-table'></div>" );
+	// 		jQuery( ".catalog-product-view #product_tabs_4_contents table" ).wrap( "<div class='category-table'></div>" );	
+	// 		jQuery( ".catalog-category-view #product_tabs_4_contents table" ).wrap( "<div class='category-table'></div>" );			
+			
+ //            jQuery( ".catalog-category-view #product_tabs_1_contents table.purify-content" ).wrap( "<div class='category-table'></div>" );
+	// 		jQuery(".catalog-category-view #product_tabs_1_contents table.purify-content td span").filter(function(){
+	// 				 	 return  jQuery.trim(this.innerHTML) === "&nbsp;"
+	// 				 }).remove();
+	// 		jQuery(".catalog-category-view #product_tabs_1_contents table.purify-content td a").filter(":empty").remove();
+	// 		jQuery(".catalog-category-view #product_tabs_1_contents table.purify-content td").filter(":empty").remove();
+	// 		     jQuery(".catalog-category-view #product_tabs_1_contents table.purify-content td strong").filter(function(){
+	// 				 	return  jQuery.trim(this.innerHTML) === "&nbsp;"
+	// 			     }).remove();
+	// 		     jQuery(".catalog-category-view #product_tabs_1_contents table.purify-content tr ").filter(function(){
+	// 				 	 return  jQuery.trim(this.innerHTML) === "&nbsp;"
+	// 				 }).remove();
+	// 		     jQuery(".catalog-category-view #product_tabs_1_contents table.purify-content td ").filter(function(){
+	// 				 	 return  jQuery.trim(this.innerHTML) === "&nbsp;"
+	// 				 }).remove();
+	// 			 jQuery(".catalog-category-view #product_tabs_1_contents table.purify-content p ").filter(function(){
+	// 				 	 return  jQuery.trim(this.innerHTML) === "&nbsp;"
+	// 				 }).remove();
+		 
+			
+	// 		jQuery('.catalog-product-view .category-table table').each(function(){	
+	// 			jQuery('#product_tabs_1_contents table').removeAttr('width border cellSpacing cellPadding style align');
+	// 			jQuery('#product_tabs_1_contents table td').removeAttr('width border cellSpacing cellPadding style align bgcolor scope');
+	// 			jQuery('#product_tabs_1_contents table td span').removeAttr('width border cellSpacing cellPadding style align bgcolor scope');	
+	// 			if(jQuery(this).find('tr td').text().trim().startsWith('Conjugate'))
+	// 				jQuery(this).addClass('table_multi_col');
+	// 			else 
+	// 				jQuery(this).addClass('table_single_col');
+	// 		});
+
+	// 		jQuery('.catalog-category-view .category-table table').each(function(){
+	// 			jQuery('#product_tabs_1_contents table').removeAttr('width border cellSpacing cellPadding style align');
+	// 			jQuery('#product_tabs_1_contents table td').removeAttr('width border cellSpacing cellPadding style align bgcolor scope');
+	// 			jQuery('#product_tabs_1_contents table td span').removeAttr('width border cellSpacing cellPadding style align bgcolor scope');	
+				
+	// 			if(jQuery(this).find('tr td').text().trim().startsWith('Conjugate'))
+	// 				jQuery(this).addClass('table_multi_col');
+	// 			else 
+	// 				jQuery(this).addClass('table_single_col');
+	// 		});
+	// 		jQuery('.catalog-category-view  #product_tabs_1_contents table').each(function(){
+	// 		if(jQuery(this).find('tr td').text().trim().startsWith('Name'))
+	// 				jQuery(this).addClass('named-class');
+	// 			else 
+	// 				jQuery(this).addClass('table_single_col4');
+	// 		});
+	// 		jQuery('.category-table table tr td').each(function(){
+	// 			if((jQuery(this).html().indexOf('img') == -1) && (!jQuery(this).text().trim().length > 0 )){
+	// 			jQuery(this).hide();
+	// 			}
+	// 		});		
+
+	// 		jQuery('.catalog-product-view .category-table table').each(function(){
+	// 			if(jQuery(this).find('tr td').text().trim().startsWith('Host/Isotype'))
+	// 			{
+	// 				jQuery(this).addClass('table_multi_col2');
+	// 			}
+	// 			else  if(jQuery(this).find('tr td').text().trim().endsWith('1:100 Dilution'))
+	// 			{
+	// 				jQuery(this).addClass('table_single_col2');
+	// 			}
+	// 			else  if(jQuery(this).find('tr td').text().trim().startsWith('Western Blot using'))
+	// 			{
+	// 				jQuery(this).addClass('table_single_col3');
+	// 			}
+	// 		});
+	// 		jQuery('.catalog-category-view #product_tabs_1_contents .table_single_col4').removeAttr('width border cellSpacing cellPadding style align');
+	// 		jQuery('.catalog-category-view  #product_tabs_1_contents table').each(function(){
+	// 			if(jQuery(this).find('tr td').text().trim().startsWith('Name'))
+	// 				jQuery(this).addClass('named-class');
+	// 			else 
+	// 				jQuery(this).addClass('table_single_col4');
+	// 		});
+			
+	// 		jQuery(' .catalog-category-view  #product_tabs_2_contents table').removeAttr(' width cellSpacing cellPadding style align');
+	// 		jQuery('.catalog-category-view  #product_tabs_2_contents table tr').removeAttr(' width cellSpacing cellPadding style align bgcolor scope');
+	// 	   jQuery('.catalog-category-view  #product_tabs_2_contents table td').removeAttr(' width cellSpacing cellPadding style align bgcolor scope');
+	// 	   jQuery('.catalog-category-view #product_tabs_2_contents table td span').removeAttr(' width cellSpacing cellPadding style align bgcolor scope');
+			
+	// 		jQuery(' .catalog-category-view  #product_tabs_3_contents table').removeAttr(' border cellSpacing cellPadding style align');
+	// 		jQuery('.catalog-category-view  #product_tabs_3_contents table tr').removeAttr(' border cellSpacing cellPadding style align bgcolor scope');
+	// 	   jQuery('.catalog-category-view  #product_tabs_3_contents table td').removeAttr(' border cellSpacing cellPadding style align bgcolor scope');
+	// 	   jQuery('.catalog-category-view #product_tabs_3_contents table td span').removeAttr(' border cellSpacing cellPadding style align bgcolor scope');
+			
+			
+	// 		jQuery( ".catalog-category-view #product_tabs_1_contents .named-class" ).wrap( "<div class='category-table'></div>" );
+	// 		jQuery( ".sales-order-history .page-center #my-orders-table" ).wrap( "<div class='category-table'></div>" );
+			
+	// 		jQuery('.catalog-product-view #product_tabs_4_contents table').each(function(){
+				
+	// 			 jQuery('#product_tabs_4_contents table').removeAttr('width border cellSpacing cellPadding style align');
+	// 			 jQuery('#product_tabs_4_contents table td').removeAttr('width border cellSpacing cellPadding style align bgcolor scope');
+	// 			 jQuery('#product_tabs_4_contents table td span').removeAttr('width border cellSpacing cellPadding style align bgcolor scope');
+	// 			 if(jQuery(this).find('tr td').text().trim().startsWith('Conjugate'))
+	// 				jQuery(this).addClass('table-faq');
+	// 		});
+
+	// 		jQuery('.cms-page-view  .std  table').each(function(){
+	// 			 jQuery('.std  table').removeAttr('width border cellSpacing cellPadding style align');
+	// 			 jQuery('.std  table td').removeAttr('width border cellSpacing cellPadding style align bgcolor scope');
+	// 			 jQuery('.std  table td span').removeAttr('width border cellSpacing cellPadding style align bgcolor scope');
+	// 			 jQuery(".cms-page-view  .std  table td span").filter(function(){
+	// 				 	 return  jQuery.trim(this.innerHTML) === "&nbsp;"
+	// 				 }).remove();
+	// 		     jQuery(".cms-page-view  .std  table td strong").filter(function(){
+	// 				 	return  jQuery.trim(this.innerHTML) === "&nbsp;"
+	// 			     }).remove();
+	// 		     jQuery(".cms-page-view .std  table tr ").filter(function(){
+	// 				 	 return  jQuery.trim(this.innerHTML) === "&nbsp;"
+	// 				 }).remove();
+	// 		     jQuery(".cms-page-view .std  table td ").filter(function(){
+	// 				 	 return  jQuery.trim(this.innerHTML) === "&nbsp;"
+	// 				 }).remove();
+	// 			 jQuery(".cms-page-view .std p ").filter(function(){
+	// 				 	 return  jQuery.trim(this.innerHTML) === "&nbsp;"
+	// 				 }).remove();
+	// 			 jQuery(".cms-page-view .std  table tr:nth-child(2) td:nth-child(1) strong").remove();
+ //                 jQuery(".cms-page-view .std  table td strong").filter(":empty").remove();
+ //                 jQuery(".cms-page-view .std  table td span").filter(":empty").remove();		
+	// 			 jQuery(".cms-page-view .std  table tr").filter(":empty").remove();					
+	// 		     jQuery(".cms-page-view .std  table td").filter(":empty").remove();	
+	// 			 jQuery(".cms-page-view p").filter(":empty").remove();
+	// 			 jQuery('.cms-page-view p').removeAttr('width border cellSpacing cellPadding style align bgcolor scope');
+	// 		 });
+	// 		 jQuery(".catalog-category-view #product_tabs_1_contents table.table_single_col4 td p br").filter(":empty").remove();
+	// 		 jQuery('.catalog-category-view  #product_tabs_1_contents  table').each(function(){
+	// 			 jQuery('#product_tabs_1_contents table').removeAttr('width border cellSpacing cellPadding style align');
+	// 			 jQuery('#product_tabs_1_contents table td').removeAttr('width border cellSpacing cellPadding style align bgcolor scope');
+	// 			 jQuery('#product_tabs_1_contents table td span').removeAttr('width border cellSpacing cellPadding style align bgcolor scope');	
+	// 		});
+			 
+	// 		jQuery('.catalog-category-view  #product_tabs_4_contents  table').each(function(){
+	// 			 jQuery('#product_tabs_4_contents table').removeAttr('width border cellSpacing cellPadding style align');
+	// 			 jQuery('#product_tabs_4_contents table td').removeAttr('width border cellSpacing cellPadding style align bgcolor scope');
+	// 			 jQuery('#product_tabs_4_contents table td span').removeAttr('width border cellSpacing cellPadding style align bgcolor scope');	
+	// 		});
+	// 		jQuery(".table_single_col tr td span").filter(function(){ 
+	// 				 	return  jQuery.trim(this.innerHTML) === "&nbsp;"
+	// 			  }).remove();
+	// 		jQuery(".blog-index-list .page-center .postWrapper .postContent p").filter(function(){ 
+	// 				 	return  jQuery.trim(this.innerHTML) === "&nbsp;"
+	// 			  }).remove();
+		    
+	// 		jQuery(".blog-index-list .page-center .postWrapper .postContent p").filter(":empty").remove();	
+	// 		jQuery( ".catalog-category-view  .table_single_col4 tr:nth-child(3) td a" ).wrap( "<p></p>" );
+	// 		jQuery(".cms-page-view .std  address br ").remove();
+	// 		jQuery(".cms-page-view .std  address").filter(":empty").remove();		
+	// 	    jQuery( ".catalog-category-view #product_tabs_2_contents table" ).wrap( "<div class='category-table'></div>" );
+			
+	// 	 jQuery( ".catalog-category-view #product_tabs_1_contents table" ).removeClass( "category-table" );
+	// 		jQuery( ".category-activation-assays #product_tabs_1_contents .sub_cate1 table " ).removeClass( "table_single_col4" );
+	// 		jQuery( ".cms-page-view.cms-about-ecm table " ).removeClass( "category-table" );
+	// 		jQuery( ".cms-page-view.cms-about-ecm table div " ).removeClass( "category-table" );
+ //           jQuery( ".categorypath-hts-bulk-hts-actin-abp.category-hts-actin-abp table,.categorypath-hts-bulk-hts-actin-abp.category-hts-actin-abp table div " ).removeClass( "category-table" );
+	// 	});
+</script>
+
+
+
+

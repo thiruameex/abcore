@@ -1,0 +1,11 @@
+<div>
+    <h1 style="font-size: 25px"><?php echo $this->__('Thank you for your order request!') ?></h1>
+</div>
+<div class="representative">
+    <p style="font-size: 15px">A Cytoskeleton, Inc. representative will soon contact you to help process your order</label><br/>
+    For a list of your international distributors please <a href="<?php echo $this->getDistributorUrl();?>" style="color:#E6B800">click here</a></p>
+    <p style="font-size: 15px">To contact Cytoskeleton directly please email <a href="mailto:<?php echo $this->getEmailAddress(); ?>" style="color:#E6B800"><?php echo $this->getEmailAddress(); ?></a></p>
+</div>
+<div class="cyto-world">
+  <img src="<?php echo $this->getSkinUrl('images/cyto-world.jpg');?>"/>
+</div>

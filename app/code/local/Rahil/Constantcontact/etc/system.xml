@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<config>
+	<sections>
+		<constantcontact translate="label" module="constantcontact">
+			<label>Constant Contact</label>
+			<tab>general</tab>
+			<frontend_type>text</frontend_type>
+			<sort_order>999</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>0</show_in_website>
+			<show_in_store>0</show_in_store>
+			<groups>
+				<settings translate="label">
+				<label>Constant Contact Settings</label>
+				<frontend_type>text</frontend_type>
+				<sort_order>1</sort_order>
+				<show_in_default>1</show_in_default>
+				<show_in_website>0</show_in_website>
+				<show_in_store>0</show_in_store>
+					<fields>
+						<constant_api_key translate="label, comment">
+							<label>Constant API Key</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</constant_api_key>						
+						<constant_username translate="label, comment">
+							<label>Constant UserName</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>3</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</constant_username>						
+						<constant_password translate="label, comment">
+							<label>Constant Password</label>
+							<frontend_type>password</frontend_type>
+							<sort_order>4</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</constant_password>
+						
+						<constant_status translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </constant_status>	
+						
+						<constant_list translate="label">
+                            <label>Contact List</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>constantcontact/list</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </constant_list>	
+						
+						
+						
+					
+											
+					</fields>
+				</settings>
+			</groups>
+		</constantcontact>
+	</sections>
+</config>

@@ -1,0 +1,20 @@
+<?php $con = Mage::getSingleton('core/session')->getForeigncustomer();
+if(($con==0)&&(Mage::getStoreConfig('ipchecker/info/enabled')==0)):?>
+<script type="text/javascript"> 
+jQuery.noConflict();
+jQuery(".btn-cart").html('');
+jQuery(".add-to-cart").html('');
+jQuery(".btn-add").html('');
+jQuery(".link-cart").html('');
+ jQuery(".block-layered-nav").html('');
+ jQuery("#product-options-wrapper").html('');
+ jQuery(".quickorder").html('');
+/*jQuery(".link-cart").html('');
+jQuery(".link-cart").html('');
+jQuery(".link-cart").html('');*/
+  // PINT: Added to hide the top links with quick order, cart, etc.
+  jQuery("#top-navigation-links").html('');
+  // PINT: Added to hide the links in the footer that deal with shopping
+  jQuery(".footer-secure-shopping, .footer-sign-in, .footer-cart").html('');
+</script>
+<?php endif;?>

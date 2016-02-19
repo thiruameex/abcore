@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <catalog>
+		            <children>
+				        <attributes>
+				            <children>
+			                    <constantcontact translate="title" module="constantcontact">
+			                        <title>Constant Contact</title>
+			                        <sort_order>30</sort_order>
+			                    </constantcontact>
+                			</children>
+                		</attributes>
+                	</children>
+                </catalog>
+            </admin>
+        </resources>
+    </acl>
+</config>

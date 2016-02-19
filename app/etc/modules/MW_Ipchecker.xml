@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <MW_Ipchecker>
+            <active>false</active>
+            <codePool>local</codePool>
+        </MW_Ipchecker>
+    </modules>
+</config> 

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Ameex_Categoryfilter>
+			<version>1.0.0</version>
+		</Ameex_Categoryfilter>
+	</modules>
+	<frontend>
+		<routers>
+            <categoryfilter> 
+                <use>standard</use>
+                <args>
+                    <module>Ameex_Categoryfilter</module>
+                    <frontName>categoryfilter</frontName>
+                </args>
+            </categoryfilter>
+        </routers>
+	</frontend>
+</config>

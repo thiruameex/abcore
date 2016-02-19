@@ -1,0 +1,341 @@
+
+@media (min-width : 768px){
+}
+@media (min-width : 768px) and (max-width: 1024px){
+	.category-table .table_single_col,
+    .category-table  .table_single_col4 {border:none !important;}
+	.catalog-product-view  .product-tabs-content .category-table  table,
+	.catalog-product-view .catalog-product-view   .product-tabs-content .category-table table,
+	.catalog-category-view .product-tabs-content .category-table   table,
+	.catalog-category-view.catalog-category-view  .product-tabs-content .category-table  table,
+	.catalog-product-view  .product-tabs-content .category-table  table tr,
+	.catalog-product-view .catalog-product-view  .product-tabs-content table tr,
+	.catalog-category-view .product-tabs-content .category-table table tr,
+	.catalog-category-view.catalog-category-view  .product-tabs-content .category-table  table tr,
+	.catalog-category-view.catalog-category-view  .product-tabs-content .category-table  table,
+	.catalog-product-view  .product-tabs-content .category-table  table tr td,
+	.catalog-product-view .catalog-product-view  .product-tabs-content .category-table  table tr td,
+	.catalog-category-view .product-tabs-content .category-table  table tr td,
+	.catalog-category-view.catalog-category-view  .product-tabs-content .category-table   table tr td,
+     .catalog-category-view  #category-table-container table,
+	 .catalog-category-view  #category-table-container table th,
+	.cms-page-view .category-table  table ,
+	.cms-page-view  .category-table  table tr ,
+	.cms-page-view  .category-table  table tr td{border:none !important;}
+	.catalog-category-view .container-list table,
+	.catalog-category-view .container-list table tr,
+	.catalog-category-view .container-list table tr td{border:none !important;}	
+	#primary_nav > li:hover > .nav-container,#primary_nav > li.over > .nav-container{z-index:-10;}
+	#primary_nav > li:first-child > a{padding: 0 5px 0 0 !important;}
+
+	.index{z-index:9999 !important;}
+	/* #primary_nav  li.haschild > strong span{background:  url("../images/breadcumbs-bg.png")} */
+	.active.haschild > p >span {border-color: #ffe519 transparent transparent;border-style: solid;border-width: 8px 5px 4px;bottom: 0;content: " ";height: 10px;left: 40%;position: absolute;width: 10px;cursor: pointer;} 
+	.active.active.haschild > p {float: left;text-align: center;width: 100%;}
+	.haschild > p span.yellow-arrow-resource {border-color: #ffe519 transparent transparent;border-style: solid;border-width: 8px 5px 4px;bottom: 0;    content: " ";cursor: pointer;height: 10px; left: 40%;position: absolute;width: 10px;}
+	#primary_nav > li .front{ z-index:9999 !important;visibility:initial !important;}
+	#primary_nav li .nav-container, #primary_nav li.haschild > ul { visibility: hidden; }
+	.camera_wrap .camera_pag .camera_pag_ul li{padding-left: 15px!important;font-size:16px;}
+}
+@media (min-width : 768px) and (max-width: 1023px) {
+	#primary_nav > li > a{font: 1em "pt_sansbold";padding: 4px 8px 5px;}
+	.main-container .info-products-homepage .product-detail .text-area{padding:5px 5px 5px 8px}
+	.main-container .info-products-homepage .product-detail .text-area > a{ margin-top: -4px;}
+	#primary_nav ul#nav > li {width:25%}
+	.sidebar {padding-left:0;}
+	.catalog-category-view .sidebar{padding-left:0;}
+	.main-container .info-products-homepage .product-detail .text-area > p{  font: 16px/1.375em "pt_sansbold";}
+	.main-container .page-center .product-view .product-options,
+	.main-container .page-center .product-view .product-options-bottom{width:100%;}
+	.sidebar .block.block-blog .blog-title-right { float: left;width: 100%;}
+	.cms-quickorder .category-table .quick-order2 {}
+    .cms-quickorder .category-table .quick-order2 tr:nth-child(2) td input{margin-top:30px !important;}
+	.catalog-category-view  #product_tabs_1_contents #category-table-container  .products-grid-pd table,
+	.catalog-category-view  #product_tabs_1_contents  #category-table-container.products-grid-pd table tr,
+	.catalog-category-view  #product_tabs_1_contents   .products-grid-pd table tr td{border:none !important;}
+	.category-protein-purification .container-list  #product_tabs_2_contents .category-table {float: left;overflow: auto;width: 100%;}
+	.category-protein-purification .container-list  #product_tabs_2_contents .category-table  table {width: 600px !important;height:300px !important}
+	.catalog-category-view .main-container #product_tabs_1_contents .category-table-container .products-grid-pd {border:none !important}
+}
+
+@media (min-width : 768px) and (max-width: 900px) {
+	.cart button.button span span {padding: 0 4px;}
+	.footer-container .footer .footer-bottom .links-bottom ul li {padding: 0 5px;}
+	}
+@media (max-width : 767px) {
+	.navbar-default .navbar-brand,
+	.navbar-default .navbar-brand:hover{color:#fff;font: 1.5em "pt_sansbold";  padding: 15px 0;}
+	.header .quick-access{width:100%;}
+	.header .quick-access .links{float:none;text-align:center;}
+	.header .links li{float:none;display:inline-block;}
+	.navbar-default .navbar-toggle:focus,
+	.navbar-default .navbar-toggle:hover {background-color: #ffe519;border:1px solid #ffe519;}
+    .navbar-default .navbar-toggle:focus .icon-bar, 
+	.navbar-default .navbar-toggle:hover  .icon-bar{background-color: #000;}
+	/*header-cart*/
+	.header-container .header a.logo{width:100%;text-align:center;}
+	.header-container .header .logo > img{width:auto;}
+	#header-minicart{ left:0% !important;}
+	.breadcrumbs-contact ul li:last-child a, .breadcrumbs-contact ul li:last-child strong, .breadcrumbs-contact ul li:last-child span {color: #fff;font: 30px "pt_sansbold";}
+	/*menu container*/
+	#primary_nav li a{font-size:16px;font-weight:normal}
+	#primary_nav > li> a {border:none;padding-left:0;font-size:20px;}
+	#primary_nav  li > span i.glyphicon-minus{display:none}
+	#primary_nav  li > span{ color: #fff;font: 20px pt_sansbold;position: absolute;right: 20px;top: 4px;display:block}
+	#primary_nav  li.open_submenu > span i.glyphicon-minus{display:block}
+	#primary_nav  li.open_submenu > span i.glyphicon-plus{display:none}
+	#primary_nav ul#nav.grid,
+	#primary_nav > li > ul{padding:0;}
+	#primary_nav ul#nav.grid li ul{display:none;padding-bottom:10px;}
+	#primary_nav ul#nav.grid li{padding-left:10px;padding-bottom:0;}
+	#primary_nav li .nav-container, #primary_nav li.haschild > ul{position:relative}
+	#primary_nav  li.haschild:hover > ul{display:none}
+	#primary_nav > li.haschild:hover:before{border:none}
+	#primary_nav > li {width: 100%;}
+	#primary_nav > li > ul, #primary_nav ul#nav{border:none;}
+	#primary_nav ul#nav > li, #primary_nav ul#nav > li > ul{width:100%;}
+	#primary_nav.navbar-nav{margin:0;}    
+	#primary_nav li .nav-container,
+	#primary_nav  li.haschild > ul{z-index:3;display:none}  
+	#primary_nav li.haschild.open_submenu .nav-container,
+	#primary_nav  li.haschild.open_submenu > ul,
+	#primary_nav ul#nav.grid li.open_submenu ul,
+	#primary_nav ul li.open_submenu ul{display:block} 
+	.catalog-category-view .sidebar,
+	.sidebar{padding-left:0;}
+	.mv_smartmenu_content #theMenu_acc li span a {border-width: 11px;  }
+	.mv_smartmenu_content #theMenu_acc > li .right.head {top: 9px;}
+	.banner-content.container .camera_wrap img {height: auto !important;margin: 0 !important;max-width: 100% !important;}
+	.menu-container .navbar-default .navbar-toggle{float:right;margin:12px 0;}
+	.links-bottom{text-align:center;}
+	.links-bottom ul li {display: inline-block;}
+	.footer-top-links {padding-bottom: 20px;}
+	.address {text-align: center;}
+    .menu-container #nav li {background-color:#000;width: 100%;}
+    .footer-container .footer .footer-bottom .links-bottom ul{width:100%;text-align:center;margin-top:20px;}
+    .footer-container .footer .footer-bottom .links-bottom ul li{float:none;}
+	.menu-container .navbar-header{display:block}
+	.header .quick-access{padding-bottom:20px;}
+	.header .quick-access li{margin-bottom:10px;}
+	.advertise > div{width:100%;margin-bottom:20px;}
+	.advertise > div.advertise-right{margin-left:0%}
+	.advertise > div.advertise-left{margin-right:0%}
+	.sidebar .block.block-blog .blog-title-right {width: 85%;}
+	.sidebar{padding-top:20px;}
+	.pager .pages {float: left;margin: 10px auto;width: 100%;}
+	.content-about-us > div{width:100%;}
+	/*resource  page*/
+	.content-about-us .content-area,
+	.content-about-us.about-contact{width:100%;}
+
+	.content-about-us:nth-child(2n+2){padding-right: 0%;} 
+	.content-about-us:nth-child(2n+1){padding-left:0%;} 
+	.content-about-us.product-content:nth-child(2n+1){clear: left;padding-right: 0%;} 
+	.content-about-us.product-content:nth-child(2n+2){clear: none;padding-left: 0%;} 
+	.cart > form{width:100%;overflow:auto}
+	/* .cart > form table{width:738px} */
+	.checkout-cart-index .cart .totals {float: left;width: 100%;}
+	.checkout-cart-index .cart .totals > table {width: auto;}
+	.checkout-cart-index .cart .button.btn-proceed-checkout.btn-checkout{float:left;}
+	.checkout-cart-index .cart .shipping,
+	.checkout-cart-index .cart .col2-set .col-2 > form{width:100%;}
+	.checkout-cart-index .cart > form{width:100%;float:left;overflow:auto}
+	.checkout-cart-index .cart > form table{width:737px;}
+	.cms-datasheets-msds .category-tables{width: 737px;}
+	.cms-datasheets-msds .content-about-us.content-about-us-table{overflow:auto}
+	.category-tables tbody {max-height:500px}
+	.category-tables tr td{width:16%;}
+	.category-tables tr td:nth-child(3){width:52%}
+	body.checkout-onepage-index  .form-list li.wide textarea,
+	body.checkout-onepage-index  .form-list li.wide select{ max-width: 100%;width: 100%;}
+	body.checkout-onepage-index .opc .buttons-set p.required{float:left;}
+	body.checkout-onepage-index #checkout-review-table thead {border: 1px solid #d9d9d9;}
+	.customer-account-index .box-account{width: 737px; max-width: 100%;}
+	.customer-account-index .box-account #my-orders-table{overflow:auto;}
+	.category-other-proteins #product_tabs_2_contents > table {width:625px;overflow:auto;}
+	.category-compound-screening .all-info_category #product_tabs_2_contents,
+	.category-compound-screening .all-info_category #product_tabs_1_contents{width:100%;float:left;overflow:auto}
+	.category-compound-screening .all-info_category #product_tabs_2_contents table,
+	.category-compound-screening .all-info_category #product_tabs_1_contents table,
+	.sales-order-history .data-table.product-ordering ,
+	.catalog-product-view  .category-table .table_single_col.table_multi_col2,
+	.catalog-product-view  .category-table  .table_single_col.table_single_col2,
+	.category-table-container .products-grid-pd,
+	.catalog-product-view  .category-table .new-table1{width:737px }
+	
+	.sales-order-history .product-order, 
+	.catalog-product-view  .category-table ,
+	.catalog-category-view .category-table ,
+	.category-table-container,
+	.cms-about-glisa .category-table,.category-table ,
+	.catalog-category-view .category-table,
+	.catalog-category-view #category-table-container{float: left;overflow: auto;width: 100%;}
+	.catalog-product-view.catalog-product-view   .category-table .table_single_col.table_multi_col2,
+	.catalog-category-view .category-table .table_multi_col,
+	.catalog-product-view  .category-table .table_multi_col,
+	.catalog-category-view .category-table table,
+	.cms-about-glisa .category-table table,
+	.sales-order-history .page-center #my-orders-table,
+	.catalog-category-view #category-table-container .products-grid-pd{width:737px !important;}
+    #product_tabs_1_contents p:first-child em strong {float: left;width: 100%;text-align:center;	}
+	
+    .cms-about-ecm .std table tr:nth-child(n+2) {width:100% !important; margin:0px !important;}
+	.main.container  .list-category .std img{  width:auto;}
+	.catalog-product-view.catalog-product-view .category-table .table_single_col tr td:nth-child(2n) {width: 100% !important;}
+	.catalog-product-view.catalog-product-view .category-table  table{border:none !important}
+
+	.catalog-product-view  .product-tabs-content .category-table  table,
+	.catalog-product-view .catalog-product-view   .product-tabs-content .category-table table,
+	.catalog-category-view .product-tabs-content .category-table   table,
+	.catalog-category-view.catalog-category-view  .product-tabs-content .category-table  table,
+	.catalog-product-view  .product-tabs-content .category-table  table tr,
+	.catalog-product-view .catalog-product-view  .product-tabs-content table tr,
+	.catalog-category-view .product-tabs-content .category-table table tr,
+	.catalog-category-view.catalog-category-view  .product-tabs-content .category-table  table tr,
+	.catalog-category-view.catalog-category-view  .product-tabs-content .category-table  table,
+	.catalog-product-view  .product-tabs-content .category-table  table tr td,
+	.catalog-product-view .catalog-product-view  .product-tabs-content .category-table  table tr td,
+	.catalog-category-view .product-tabs-content .category-table  table tr td,
+	.catalog-category-view.catalog-category-view  .product-tabs-content .category-table   table tr td,
+     .catalog-category-view  #category-table-container table,
+	 .catalog-category-view  #category-table-container table th,
+	.cms-page-view .category-table  table ,
+	.cms-page-view  .category-table  table tr ,
+	.cms-page-view  .category-table  table tr td{border:none !important;}
+	.catalog-category-view .container-list table,
+	.catalog-category-view .container-list table tr,
+	.catalog-category-view .container-list table tr td{border:none !important;}
+     table.products-grid-pd {width: 713px !important;}
+	.catalog-category-view #product_tabs_1_contents p:first-child a {float: left;text-align: center;width: 100%;}
+	.cms-datasheets-msds .category-tables {max-height:500px;overflow:scroll; -webkit-overflow-scrolling: touch;}
+	.category-tables tbody {max-height:inherit;overflow:visible}
+	.categorypath-activation-assays #product_tabs_1_contents .table_single_col4 td {float: left;text-align: center;width: 100% !important;}
+	.category-antibody-elisa-development #product_tabs_1_contents .table_single_col4 td,
+	.category-assay-development #product_tabs_1_contents .table_single_col4 td,
+    .category-compound-screening #product_tabs_1_contents .table_single_col4 td,
+    .category-protein-purification #product_tabs_1_contents .table_single_col4 td{float:none !important;}
+	#product_tabs_1_contents p:first-child img { float: none !important; max-width: 100%;}
+	#product_tabs_1_contents h4:first-child img {text-align: center !important;float: none !important;}
+	#product_tabs_1_contents > h4:first-child  {float: left;width:100%;text-align: center;}
+ 	.catalog-category-view .container-list p:first-child {   float: left;text-align: center !important; width: 100%;}
+	
+	/*changes in responsive menu*/
+	#primary_nav li:nth-child(3).haschild.open_submenu > a{top: -6px;position:absolute;left:0%}
+	#primary_nav  li:nth-child(3).haschild.open_submenu > ul{margin-top:20px;}
+	.catalog-product-view.category-phosphotyrosine-antibody .category-table .table_single_col tr td, .catalog-product-view.category-phosphotyrosine-antibody .category-table .table_single_col tr td:nth-child(2n){width:100% !important;}
+	.catalog-product-view.catalog-product-view #product_tabs_1_contents .category-table .table_single_col td p img, .catalog-product-view.catalog-product-view #product_tabs_1_contents .category-table .table_single_col td img{float:none !important;}
+	
+}
+@media (max-width : 568px) {
+	.product-tabs li{width:100%;} 
+	.product-tabs li a{width:100%;text-align:left;padding-left:20px;}
+	.product-tabs li.active a, .product-tabs li:hover a{line-height:34px;margin-bottom:0;}
+	.blog-index-list table{width:100%}
+	.product-view .product-options{width:100%;float:left;}
+	.product-view .product-options-bottom{float:left;}
+	.product-view .product-options-bottom .add-to-cart button.button{margin-top:10px; margin-left:0px !important;}
+	.category-compound-screening .table_single_col4, 
+	.category-protein-purification .table_single_col4, 
+	.category-assay-development .table_single_col4, 
+	.category-antibody-elisa-development .table_single_col4, 
+	.category-custom-services .table_single_col4{float:none !important}
+	.banner .banner-content  .camera_wrap.camera_grey_skin {height: 235px !important;}
+	
+}
+@media (max-width : 480px) {
+	#header-minicart{ left:0% !important;width:290px !important;}
+	#header-minicart .block-title-cart{width:100%;}
+	#header-minicart .block-content{width:100% !important;}
+	.sidebar .block.block-blog .blog-title-right {width: 78%;}
+	.product-tabs-content p img{max-width:100%;margin:0px !important;}
+	#product_tabs_1_contents p:first-child img{float: none !important;max-width: 100%; }
+	.catalog-category-view #product_tabs_1_contents  h3 img{display:block; float:none !important;}
+	.catalog-product-view  #product_tabs_1_contents  p:first-child strong, 
+	.catalog-product-view  #product_tabs_1_contents  p:first-child strong span,
+	.catalog-category-view #product_tabs_1_contents  p:first-child strong,
+	
+	.catalog-category-view #product_tabs_1_contents    p:first-child strong span{/* width:100%; */float:left;/* text-align:center; */} 
+	.catalog-category-view #product_tabs_1_contents  h3 {width:100%;float:left;}
+	.catalog-category-view  #product_tabs_2_contents em { float: left;padding-bottom: 10px;}
+	.catalog-product-view.catalog-product-view #product_tabs_1_contents > ul {float: left;width: 100%; display:block;}
+	/*main container*/
+/* 	.cms-page-view   .list-category   p:first-child strong span{width:100%;float:left;text-align:center;}
+	.cms-page-view   .list-category  h1{width:100%;float:left;}
+	.cms-page-view   .list-category  p:first-child  img{display:block; float:none !important; text-align:center;} */
+	
+	.catalog-category-view #product_tabs_1_contents h3:first-child {float: left;text-align: center;width: 100%;}
+
+	.catalog-category-view #product_tabs_1_contents h3:first-child  img{ text-align: center !important;display:inline-block;}
+	.main-container .main .col-main .content-col1 .std .home-content-center .info-products-homepage ul li {  width: 100%;}
+	.main-container .main .col-main .content-col1 .std .home-content-center .america .video,
+	.main-container .main .col-main .content-col1 .std .home-content-center .america  .news-updated{width:100%;float:left;}
+	.main-container .main .col-main .content-col1 .std .home-content-center .america .technical-support{width:100%;}
+	.add-to-cart {float: left; padding-top: 10px;width: 50%;}
+	.product-view .product-options-bottom {float: left;width: 100%;}
+	.category-compound-screening .table_single_col4, 
+	.category-protein-purification .table_single_col4, 
+	.category-assay-development .table_single_col4, 
+	.category-antibody-elisa-development .table_single_col4, 
+	.category-custom-services .table_single_col4{float:none !important}
+	.sales-order-history .my-account{padding:0px;}
+	.sales-order-history .product-order {margin-bottom: 20px !important;}
+	
+	.category-binding-proteins .table_single_col4 tr td{float:left;}
+	.category-binding-proteins .table_single_col4 span {padding: 0px;text-align: justify;}
+	.categorypath-activation-assays #product_tabs_1_contents  .table_single_col4 td{float:left;}
+	#primary_nav .glyphicon.glyphicon-plus,
+    #primary_nav .glyphicon.glyphicon-minus	{padding: 0 5px;}
+	.catalog-product-view.catalog-product-view .category-table .table_single_col.table_single_col3 tr td:nth-child(1) {width: 100% !important;}
+	.catalog-product-view.catalog-product-view .category-table .table_single_col.table_single_col3 tr td:nth-child(2n) {width: 100% !important;}
+	.catalog-category-view .container-list p:first-child a img{}
+
+	#product_tabs_1_contents .table_single_col4 tr td{border: medium none !important;/* float: right; */ margin-bottom: 10px;}
+	#product_tabs_1_contents ul li strong {float: left;}
+	.checkout-onepage-index .opc .step .tool-tip {max-width: 100%;right: 0;}
+	.checkout-onepage-index .account_common .form-list select { max-width: 100%;width: 100% !important;}
+    .cms-quickorder .category-table .quick-order2 tr,
+	.cms-quickorder .category-table .quick-order2  td{border:1px solid #d9d9d9;}
+	
+}
+@media (max-width : 479px) {
+	.header .links li{padding: 0 0 0 4px;}
+	.header #top-navigation-links a{font-size:11px;}
+}
+@media (min-width : 320px) and (max-width: 767px){
+	ul.camera_pag_ul li > span > span {display: none;}
+	ul.camera_pag_ul li > span {border-radius: 50%;width: 13px;height: 13px;float: left;background: #fff;}
+	ul.camera_pag_ul li.cameracurrent > span{background: #fbe119 ;}
+}
+@media (min-width: 1300px) {
+	.cameraSlide {text-align: center;}
+	.camera_wrap img {height: 450px !important;margin: 0 auto !important;width: 1397px !important;position: relative !important;}
+	.banner-content.container .camera_wrap {height: 450px !important;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
