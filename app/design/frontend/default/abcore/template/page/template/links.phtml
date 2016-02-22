@@ -47,45 +47,15 @@
         
     
        </script>
-<?php $_links = $this->getLinks(); ?>
-<?php $currentUrl = Mage::helper('core/url')->getCurrentUrl(); ?>       
-       
-<?php if(count($_links)>0): ?>
-  <?php /* PINT: Added top-navigation-links id so it can be hidden from international customers */  ?>
-<ul id="top-navigation-links" class="links"<?php //if($this->getName()): ?> id="<?php //echo $this->getName() ?>"<?php //endif;?>>
-	<li class="first <?php if($currentUrl == $this->getUrl('quickorder')){ echo 'active';}?>"> 
-		<a href="<?php echo $this->getUrl('quickorder') ?>"><?php echo $this->__('Quick Order');?></a>
-	</li>
-        <?php $i=0;?>
-    <?php foreach($_links as $_link): ?>
-        <?php if ($_link instanceof Mage_Core_Block_Abstract):?>
-            <?php echo $_link->toHtml() ?>
-        <?php else: ?>
-        <?php  $_link->getLabel();
-        
-        
-              // $check = strpos($_link->getLabel(),'My Cart');
-         if($_link->getLabel() == 'My Cart' || $_link->getLabel()=='My Cart (1 item)'|| $_link->getLabel()=='My Cart (2 items)'|| $_link->getLabel()=='My Cart (3 items)'|| $_link->getLabel()=='My Cart (4 items)'
-                 || $_link->getLabel()=='My Cart (5 items)'|| $_link->getLabel()=='My Cart (6 items)'|| $_link->getLabel()=='My Cart (7 items)'|| $_link->getLabel()=='My Cart (8 items)'|| $_link->getLabel()=='My Cart (9 items)'
-                 || $_link->getLabel()=='My Cart (10 items)'|| $_link->getLabel()=='My Cart (11 items)'|| $_link->getLabel()=='My Cart (12 items)'|| $_link->getLabel()=='My Cart (13 items)'
-                 || $_link->getLabel()=='My Cart (14 items)'|| $_link->getLabel()=='My Cart (15 items)'|| $_link->getLabel()=='My Cart (16 items)'|| $_link->getLabel()=='My Cart (17 items)'
-                 || $_link->getLabel()=='My Cart (18 items)' || $_link->getLabel()=='My Cart (20 items)' || $_link->getLabel()=='My Cart (25 items)' || $_link->getLabel()=='My Cart (30 items)'|| $_link->getLabel()=='My Cart (40 items)'|| $_link->getLabel()=='My Cart (50 items)'|| $_link->getLabel()=='My Cart (100 items)'){?>
-         
-        <?php  $count = $this->helper('checkout/cart')->getSummaryCount();?>
-        <?php $this->getChildHtml('cart_sidebar'); ?> 
-      
-        <li id="new-cart" class=" <?php  if($currentUrl == $this->getBaseUrl().'checkout/cart/' || $currentUrl == 'http://cytoskeleton.com/checkout/cart/'){ echo ' active';}?>">
-        <a class="top-link-cart <?php echo ($count == 0)? 'no-items' : '';?>" id="new-cart1" onclick="showminicart()"  title="My Cart" href="javascript:void(0)">My Cart  
-        <?php  $count = $this->helper('checkout/cart')->getSummaryCount();
-        if($count != 0){?>
-        <span class="itemscount" style="background: none repeat scroll 0% 0% rgb(255, 225, 0); color: rgb(0, 0, 0); margin-left: 3px; padding: 2px 4px 0px; font-size: 13px; font-weight: bold; line-height: 18px;">
-        <?php echo $count;?> 
-        </span>
-        <?php } ?>
-        </a></li>
-      <?php }else{  ?>
-            <li<?php if($_link->getIsFirst()||$_link->getIsLast()): ?> class="<?php if($currentUrl == $_link->getUrl()){ echo 'active ';}?><?php if($_link->getIsLast()): ?> last<?php endif; ?>"<?php endif; ?> <?php echo $_link->getLiParams() ?>><?php echo $_link->getBeforeText() ?><a href="<?php echo $_link->getUrl() ?>" title="<?php echo $_link->getTitle() ?>" <?php echo $_link->getAParams() ?>><?php echo $_link->getLabel() ?></a><?php echo $_link->getAfterText() ?></li>
-        <?php  } endif;?>
-    <?php $i++; endforeach; ?>
+<ul id="top-navigation-links" class="links">
+  <li><a href="<?php echo $this->getStoreUrl('customer/account/login/')?>">Sign Up</a></li>
+  <li><a href="<?php echo $this->getStoreUrl('customer/account/login/')?>">Log In</a></li>
+  <li id="new-cart">
+          <a class="top-link-cart <?php echo ($count == 0)? 'no-items' : '';?>" id="new-cart1" onclick="showminicart()"  title="My Cart" href="javascript:void(0)">Cart  
+          <?php  $count = $this->helper('checkout/cart')->getSummaryCount();
+          if($count != 0){?>
+          <span class="itemscount"><?php echo $count;?></span>
+          <?php } ?>
+          </a>
+  </li>     
 </ul>
-<?php endif; ?>

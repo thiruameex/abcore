@@ -62,7 +62,7 @@ h6 strong{color:#000;text-decoration:none;font:bold 16px Arial;}
 .page{width:100%; float:left; background:#fff;}
 /*header area*/
 
-.header-container {background: #000; width:100%; float:left;}
+.header-container {background: #FBFAFC; width:100%; float:left;}
 .header.container{width:100%; max-width:994px;margin:0 auto ;}
 .header .logo > img {max-width: 100%;  width: 100%;}
 .menu-container .line{background: #fff;height: 2px;width: 100%;}
@@ -91,7 +91,7 @@ h6 strong{color:#000;text-decoration:none;font:bold 16px Arial;}
  /*cyto information area end*/  
 
 /*menu-container*/
-.menu-container { background-image: none;background-color: #000;}
+.menu-container { background-image: none;background-color: #262262;}
 .menu-container{width:100%; float:left;margin-top:2px;}
 #primary_nav li a{color:#fff; padding:2px 8px; font-size: 13px;font-weight: bolder; display:inline-block;background:transparent;}
 .menu-links.container {max-width: 994px;width: 100%;margin: 12px auto 3px;}
@@ -208,7 +208,7 @@ table.gsc-search-box td.gsc-input{padding:0 !important;}
 
 
 /*footer area start*/
-.footer-container {background: #000 ;float:left;position:relative;width:100%;padding-top: 40px;padding-bottom:55px;}
+.footer-container {background: #262262;float:left;position:relative;width:100%;padding-top: 40px;padding-bottom:55px;}
 .line-div {border-color: #ffe519 transparent transparent;background: #fbe119 none repeat scroll 0 0;height: 4px;left: 0;position: absolute;width: 100%;}
 .line-div._top{top:4px}
 .footer-container .footer .info-all-footer {padding: 0px;}
@@ -920,3 +920,7 @@ body .account_common p{font-size:14px;line-height:auto}
   .catalog-product-view.catalog-product-view #product_tabs_1_contents .category-table .table_single_col td img{ float: right;
     margin: 0 !important;}
 	
+/********** abcore ************/
+#top-navigation-links{float: right;}
+#top-navigation-links li{float: left;padding: 0px 5px; }
+#top-navigation-links li a{color: #ffffff;}

@@ -1,0 +1,80 @@
+Flexible service schedules to meet your needs
+Dedicated scientists on hand to coordinate and execute your project
+
+
+Conjugated Antibodies
+
+We release antibodies pre-conjugated to 22 tags to help you reduce background signals, and to save you time and money.
+
+
+Featured Product Categories
+We're constantly developing and releasing products to meet the needs of our customers.Here are some recent favorites.
+
+What’s New at Abcore
+
+New Product Release
+Abcore Releases Pre-Conjugated CD34 Antibody, Clone QBEND-10
+Abcore is releasing a CD34 monoclonal antibody, clone QBEND-10, which we are offering conjugated to 22 different tags.
+See the Products
+
+
+Blog Post
+Llama Nanobody Contributes to Crystal Structure and Nobel Prize
+In 2012, Brian K. Kolbika and Robert J. Lefkowitz were awarded the Nobel Prize in Chemistry for their investigation of G-Protein Coupled Receptors.
+Read the Full Post
+
+New Product Release
+EXBIO Releases 26 New Conjugated Antibodies
+EXBIO has just released 26 new antibodies. Part of Abcore serving as EXBIO’s US Hub requires us to keep our catalogs 100% in sync. EXBIO keeps us...
+See the Products
+
+fOOTER:::
+
+<div class="footer-top-links col-xs-12 col-sm-3 ">
+	<h6>Products</h6>
+	<ul class="list-group">
+	<li><a href="{{store direct_url=''}}">Antibodies</a></li>
+	<li><a href="{{store direct_url=''}}">By Type</a></li>
+	<li><a href="{{store direct_url=''}}">Conjugated Antibodies</a></li>
+	<li><a href="{{store direct_url=''}}">Disease Antibodies</a></li>
+	<li><a href="{{store direct_url=''}}">By Feature</a></li>
+	<li><a href="{{store direct_url=''}}">Antibodies by Host Species</a></li>
+	<li><a href="{{store direct_url=''}}">Antibodies by Application</a></li>
+	<li><a href="{{store direct_url=''}}">Antibodies by Clonality</a></li>
+	<li><a href="{{store direct_url=''}}">Antibodies by Function</a></li>
+	<li><a href="{{store direct_url=''}}">Secondary Antibodies</a></li>
+	<li><a href="{{store direct_url=''}}">By Conjugate</a></li>
+	<li><a href="{{store direct_url=''}}">By Species</a></li>
+	<li><a href="{{store direct_url=''}}">Blocking Peptides</a></li>
+	<li><a href="{{store direct_url=''}}">New Products</a></li>
+	</ul>
+</div>
+<div class="footer-top-links  col-xs-12 col-sm-3">
+	<h6>Services</h6>
+	<ul class="list-group">
+		<li><a href="{{store direct_url=''}}">Custom Production</a></li>
+		<li><a href="{{store direct_url=''}}">Rabbit Antibody Production</a></li>
+		<li><a href="{{store direct_url=''}}">Llam Antibody Production</a></li>
+		<li><a href="{{store direct_url=''}}">Llama Monoclonal Antibodies</a></li>
+		<li><a href="{{store direct_url=''}}">Ascites Production</a></li>
+		<li><a href="{{store direct_url=''}}">Chicken Antibody Production</a></li>
+		<li><a href="{{store direct_url=''}}">Goat Antibody Production</a></li>
+		<li><a href="{{store direct_url=''}}">Rabbit Monoclonal Antibodies</a></li>
+	</ul>
+</div>
+<div class="footer-top-links  col-xs-12 col-sm-3">
+	<h6>Company</h6>
+	<ul>
+		<li><a href="">Orders & Shipping</a></li>
+		<li><a href="">Blog</a></li>
+	</ul>
+	<div>&nbsp;</div>
+	<h6>Contact us</h6>
+	<p>Distributors</p>
+	<p class="bld_upper">405 Maple Street,<br/>Suite A106 Ramona,<br/>CA 92065</p>
+	<p>&nbsp;</P>
+	<p class="bld_upper">Phone: (888) 359-1364<br/>Fax: (888) 884-9241<br/>Email: <span><a href="mailto:info@abcore-inc.com">info@abcore-inc.com</a></span></p>
+</div>
+<div class="footer-top-links  col-xs-12 col-sm-3">
+	{{block type="newsletter/subscribe" name="left.newsletter" template="newsletter/subscribe.phtml"}}
+</div>
