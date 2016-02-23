@@ -22,10 +22,13 @@ url('fonts/ArialNarrowBold.ttf') format('truetype');font-weight:normal;font-styl
 /*.bg-left-search{float:right;width:5px;height:35px;}*/
 /* .form-search-a{float:right;height:35px;width:392px;margin-right:0px;} */
 /* .bg-right-search{float:right;width:5px;height:35px;}
- */.form-search-a button.button{background:none;border:none;color:#000000;cursor:pointer;font-size:12px;font-weight:normal;line-height:26px;margin-top:4px;overflow:visible;padding:0;}
+ */
+.form-search-a label{color:#f7953c;font-size: 14px;font-weight: 400;}
+ .form-search-a button.button{background:none;border:none;color:#000000;cursor:pointer;font-size:12px;font-weight:normal;line-height:50px;margin-top:0px;overflow:visible;padding:0;}
+}
 .form-search-a button.button span{border:medium none !important;color:#000000;display:block;font-family:Arial;font-size:12px;font-weight:normal;height:26px;line-height:26px;padding-left:0;padding-right:8px;}
-.form-search-a button.button span span{background:url(../images/button-search-left.gif) no-repeat scroll left top !important;line-height:26px;padding-left:27px;}
-.form-search-a input.input-text{background:url(../images/input-search.gif) no-repeat scroll;border:medium none;color:#999999;font-family:Arial;font-size:12px;height:22px;line-height:25px;padding-left:6px;padding-right:6px;width:266px;margin-top:5px;}
+.form-search-a button.button span span{background:url(../images/search-button.png) no-repeat right 0px!important;height:50px;width:101px;display: block;text-indent: -9999999px;}
+.form-search-a input.input-text{background:none;border:none;border-left:1px solid #C3C3C4;color:#999999;font-family:Arial;font-size:12px;line-height:50px;padding-left:6px;padding-right:6px;width:266px;margin-top:5px;}
 /* .top-serach-ps{position:relative;} */
 /* .search-ab{position:absolute;right:5px;top:23px;} */
 /* .header .links a{color:#fff;text-decoration:none;} */
@@ -76,11 +79,41 @@ url('fonts/ArialNarrowBold.ttf') format('truetype');font-weight:normal;font-styl
 .footer-bottom .block{border:medium none;margin:0;}
 .footer-bottom .block-subscribe .block-content{padding:0;text-align:left;}
 .footer-bottom .block .block-content{background:none;}
-.footer-bottom .block-subscribe input.input-text{background:url(../images/join.gif) no-repeat scroll;border:none;height:20px;line-height:24px;width:175px;float:left;}
+.footer-bottom .block-subscribe input.input-text{
+    background-image: none;
+    width: 90%;
+    border:none;
+    border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    padding: 10px 0px 10px 10px;
+}
 .footer-bottom .block-subscribe .validation-advice{float:left;width:160px;}
-.block-content-bt button.button{background:none;border:none;color:#FFFFFF;cursor:pointer;font-size:11px;font-weight:normal;line-height:24px;margin-top:0;overflow:visible;padding:0;margin-left:5px;margin-top:3px;}
-.footer-bottom .block-subscribe button.button span{background:url(../images/join-right.gif) no-repeat scroll right top !important;border:none !important;color:#fff;display:block;font-family:Arial;font-size:11px;font-weight:normal;height:24px;line-height:24px;padding-left:0;padding-right:5px;text-transform:uppercase;}
-.footer-bottom .block-subscribe button.button span span{background:url(../images/join-left.gif) no-repeat scroll left top !important;line-height:24px;padding-left:11px;}
+.block-content-bt button.button{
+    background:#F7953C;
+    width: 90%;
+    border:none;
+    border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    padding: 5px 0px;
+    margin-left:0px;
+    margin-top:5px;
+}
+.footer-bottom .block-subscribe button.button span{
+    font-size: 20px;
+    font-weight: 600;
+    border-radius:10px;
+    -o-border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    color:#262262;display:block;
+    height:40px;
+    line-height:40px;
+    text-transform:uppercase;
+}
 .block-subscribe input.input-text{display:inline-block;}
 .newletter-footer{width:294px;float:left;}
 /* .address{float:left;} */
