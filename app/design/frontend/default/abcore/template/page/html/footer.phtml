@@ -24,46 +24,20 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>       
-<?php
-if(Mage::getBlockSingleton('page/html_header')->getIsHomePage()) { ?>
-<div class="cyto-information">
-<div class=" cyto-info container">
-<div class="row">
-<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('company-info')->toHtml();?>
-</div>
-</div>
-</div>
-<?php } ?>
+<?php //echo $this->getLayout()->createBlock('cms/block')->setBlockId('company-info')->toHtml();?>
+
 <div class="footer-container">		
-			<div class="footer container">				
-					<div class="info-all-footer row">
-						<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_links')->toHtml() ?>
-					<div class="clear-both"></div>
-					</div>
-					
-					<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_done_right')->toHtml();?>
-					
-					<div class="clear-both"></div>
-					<div class="footer-bottom">
-						<div class="row">
-							<!--<div class="newletter-footer">
-							   <?php //echo $this->getChildHtml('newsletter') ?>
-							</div>-->
-							<div class="address col-xs-12 col-sm-8">
-								<address><?php echo $this->getCopyright() ?></address>
-							</div>
-							<div class="links-bottom col-xs-12 col-sm-4">
-								<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('bottom_links')->toHtml() ?>
-							</div>
-							 <div class="clear-both"></div>
-						</div>
-					 </div>
-					 <div class="img-top">
-						<a href="#top">
-							<img src="<?php echo $this->getSkinUrl('images/footer-top-text.png');?>"/>
-						</a>
-					 </div>
-					 
+	<div class="footer container">	
+		<div class="footer-bottom">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12">
+					<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_links')->toHtml() ?>
+				</div>
+				<div class="clear-both"></div>
+				<div class="address col-xs-12 col-sm-8">
+					<address><?php echo $this->getCopyright() ?></address>
+				</div>
 			</div>
-		
 		</div>
+	</div>
+</div>
