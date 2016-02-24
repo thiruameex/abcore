@@ -26,7 +26,7 @@ h6 strong{color:#262262;text-decoration:none;font:bold 15px;font-family: 'Roboto
 /*header area*/
 
 .header-container {background: #FBFAFC; width:100%; float:left;}
-.header.container{width:100%; max-width:1000px;margin:0 auto ;}
+.header.container{width:100%; max-width:960px;margin:0 auto ;}
 .header .logo > img {max-width: 100%;  width: 100%;}
 .menu-container .line{background: #fff;height: 2px;width: 100%;}
 .header .links li {float: left;font-size: 14px;line-height: 10px;padding: 0 8px 0 7px;border-left: 2px solid #474747; display:inline; } 
@@ -50,14 +50,14 @@ h6 strong{color:#262262;text-decoration:none;font:bold 15px;font-family: 'Roboto
 .cyto-information  .cyto-info p span{color:#0d6ec9;}
 .cyto-information  .cyto-info p{font:1.125em/1.875em 'Roboto', sans-serif;text-align: justify;}
 .cyto-information{width:100%; background-color: #ececec;float:left;padding: 30px 0 25px;}
-.container.cyto-info{max-width:1000px; width:100%;  }
+.container.cyto-info{max-width:960px; width:100%;  }
  /*cyto information area end*/  
 
 /*menu-container*/
 .menu-container { background-image: none;background-color: #262262;}
 .menu-container{width:100%; float:left;margin-top:2px;}
 #primary_nav li a{color:#fff; padding:2px 8px; font-size: 13px;font-weight: bolder; display:inline-block;background:transparent;}
-.menu-links.container {max-width: 994px;width: 100%;margin: 12px auto 3px;}
+.menu-links.container {max-width: 960px;width: 100%;margin: 12px auto 3px;}
 .menu-container .navbar-header{display:none}
 .menu-container .top_menu_nav{padding:0;}
 #primary_nav  ul li {list-style: none;}
@@ -108,7 +108,7 @@ table.gsc-search-box td.gsc-input{padding:0 !important;}
 .banner-content.container .camera_wrap{margin:0 !important}
 .banner-content.container .camera_wrap .camera_pag .camera_pag_ul{position:absolute;width:100%;bottom:0;text-align:center}
 .banner .fluid_container {margin: 0 auto;max-width: 100% !important;width: 100%;}
-.banner .fluid_container .camera_pag{margin:0 auto;position:relative;max-width:1000px;width:100%;}
+.banner .fluid_container .camera_pag{margin:0 auto;position:relative;max-width:960px;width:100%;}
 .banner .banner-content .camera_prev,
 .banner .banner-content .camera_next{margin: 0;top: 0;height: 100%;width: 15%;opacity:1 !important;/*background:url(../images/trans_left.png) no-repeat;background-size:100% 100%;*/background:transparent; }
 .banner .banner-content .camera_prev span,
@@ -119,7 +119,7 @@ table.gsc-search-box td.gsc-input{padding:0 !important;}
 
 /*main-container*/
 .main-container{width:100%;float:left; background-image: none; background-color:#fff;}
-.main-container .main{width:100%; max-width:1000px;margin:30px auto 50px;overflow: hidden;}
+.main-container .main{width:100%; max-width:960px;margin:30px auto 50px;overflow: hidden;}
 .cms-home .main-container .main{margin:0 auto;}
 .main-container .main .page-top,
 .main-container .main .page-bottom{display:none}
@@ -172,7 +172,7 @@ table.gsc-search-box td.gsc-input{padding:0 !important;}
 .line-div {border-color: #ffe519 transparent transparent;background: #fbe119 none repeat scroll 0 0;height: 4px;left: 0;position: absolute;width: 100%;}
 .line-div._top{top:4px}
 .footer-container .footer .info-all-footer {padding: 0px;}
-/*.footer.container{max-width:1000px; width:100%;}*/
+/*.footer.container{max-width:960px; width:100%;}*/
 .footer li{text-align:left;display:block;padding:0px;}
 .footer-container .footer .info-all-footer .footer-top-links  p{color:#ffe519;margin:0;font: 0.938em/1.5em 'Roboto', sans-serif;}
 .footer-container .footer .info-all-footer  .footer-top-links  p span{color:#fff;}

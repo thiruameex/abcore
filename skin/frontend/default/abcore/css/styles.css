@@ -1274,8 +1274,8 @@ tr.summary-details-excluded{font-style:italic;}
 .cms-index-index .main.container{
 	width: 100%;
 }
-.cms-index-index .inner-container{
-	max-width: 1000px;
+.footer.container,.cms-index-index .inner-container{
+	max-width: 960px;
 	margin: 0 auto;
 }
 .inner-container h3{
@@ -1304,6 +1304,7 @@ tr.summary-details-excluded{font-style:italic;}
 .section-1,.section-2,.section-3,.section-4,.section-5,.section-5-1{
 	overflow: auto;
 	text-align: center;
+	padding-bottom: 20px;
 }
 .section-1 p{
 	width: 80%;
@@ -1319,13 +1320,13 @@ tr.summary-details-excluded{font-style:italic;}
 	font-style: italic;
 }
 .section-1 .titles{
-	background: url(../images/sample-line.png) repeat-x center;
+	background: url(../images/sample-line.jpg) repeat-x center top;
 	color: #f7953c;
 	text-transform: uppercase;
 	margin-bottom: 40px;
 }
 .section-1 .titles span{
-	padding: 0px 20px;
+	padding: 0px 15px;
 	background: #ffffff;
 }
 .section-2{
@@ -1367,7 +1368,7 @@ tr.summary-details-excluded{font-style:italic;}
 }
 .section-3 ul,.section-4 ul{
 	float: left;
-	width: 30%;
+	width: 49%;
 }
 .section-3 li{
 	background:#E9E8EF;
@@ -1395,17 +1396,19 @@ tr.summary-details-excluded{font-style:italic;}
 .section-4 li{
 	background:#FDE6D1;
 	border:none;
-	border-radius:5px 0px 0px 5px;
-	-o-border-radius:5px 0px 0px 5px;
-	-webkit-border-radius:5px 0px 0px 5px;
-	-moz-border-radius:5px 0px 0px 5px;
+	border-radius:5px;
+	-o-border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
 	margin: 5px 0px;
 }
 .section-4 li a{
+	background:url(../images/grey-arrow.png) no-repeat center right;
 	color: #262262;
 	display: block;
 	text-align: left;
-	padding: 10px 0px 10px 10px;
+	padding: 10px;
+	margin-right: 10px;
 }
 .section-5 .aln-left span{
 	line-height: 40px;

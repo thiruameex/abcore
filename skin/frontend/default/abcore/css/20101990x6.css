@@ -23,12 +23,21 @@ url('fonts/ArialNarrowBold.ttf') format('truetype');font-weight:normal;font-styl
 /* .form-search-a{float:right;height:35px;width:392px;margin-right:0px;} */
 /* .bg-right-search{float:right;width:5px;height:35px;}
  */
-.form-search-a label{color:#f7953c;font-size: 14px;font-weight: 400;}
- .form-search-a button.button{background:none;border:none;color:#000000;cursor:pointer;font-size:12px;font-weight:normal;line-height:50px;margin-top:0px;overflow:visible;padding:0;}
+.quick-access,.top-serach-ps{padding-right: 0px !important;}
+#search_mini_form label{color:#f7953c;font-size: 14px;font-weight: 400;line-height: 50px;padding-right: 10px;float: left;text-transform: uppercase;}
+.form-search-a{
+    border:1px solid #c3c3c4;
+    border-radius: 7px;
+    -o-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    float: left;
+}
+.form-search-a button.button{background:none;border:none;color:#000000;cursor:pointer;font-size:12px;font-weight:normal;line-height:50px;margin-top:0px;overflow:visible;padding:0;}
 }
 .form-search-a button.button span{border:medium none !important;color:#000000;display:block;font-family:Arial;font-size:12px;font-weight:normal;height:26px;line-height:26px;padding-left:0;padding-right:8px;}
 .form-search-a button.button span span{background:url(../images/search-button.png) no-repeat right 0px!important;height:50px;width:101px;display: block;text-indent: -9999999px;}
-.form-search-a input.input-text{background:none;border:none;border-left:1px solid #C3C3C4;color:#999999;font-family:Arial;font-size:12px;line-height:50px;padding-left:6px;padding-right:6px;width:266px;margin-top:5px;}
+.form-search-a input.input-text{background:none;border:none;/* border-left:1px solid #C3C3C4; */color:#999999;font-family:Arial;font-size:12px;line-height:49px;padding-left:6px;padding-right:6px;width:266px;margin-top:0px;}
 /* .top-serach-ps{position:relative;} */
 /* .search-ab{position:absolute;right:5px;top:23px;} */
 /* .header .links a{color:#fff;text-decoration:none;} */
