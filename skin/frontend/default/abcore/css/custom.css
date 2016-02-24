@@ -5,11 +5,11 @@ body{font:15px 'Roboto', sans-serif;}
 *{margin:0px;padding:0px;}
 a{text-decoration:none;font-size:15px; font-family:'Roboto', sans-serif;}
 a:hover{text-decoration:none;font-size:15px;font-family: 'Roboto', sans-serif;color:#0d6ec9;}
-p{color:#000;font-size:15px; font-family:'Roboto', sans-serif;}
+p{color:#f7953c;font-size:15px; font-family:'Roboto', sans-serif;}
 p strong,
 p span,
 p strong span,
-p strong span{color:#000;}
+p strong span{color:#f7953c;}
 ul{list-style-type:none;}
 .sidebar{padding-left:45px;}
 .col-left .sidebar{padding-left:0;}
@@ -64,12 +64,12 @@ h6 strong{color:#262262;text-decoration:none;font:bold 15px;font-family: 'Roboto
 #primary_nav > li{float:left;padding-bottom:9px;}
 #primary_nav > li > a{border-left: 1px solid #4d4d4d;display:inline;font: 1.125em 'Roboto', sans-serif;padding:4px 15px 5px;}
 #primary_nav li .nav-container,
-#primary_nav  li.haschild > ul{visibility:hidden; background:#000;top:100%;left:0;position:absolute;z-index:-1;/* visibility:hidden */}
+#primary_nav  li.haschild > ul{visibility:hidden; background:#676491;top:100%;left:0;position:absolute;z-index:-1;/* visibility:hidden */}
 #primary_nav  li.haschild:hover > ul{display:block;z-index:3;visibility:visible}
 #primary_nav  li  > span{display:none;cursor:pointer}
 #primary_nav > li:hover > .nav-container,#primary_nav > li.over > .nav-container{z-index:9999;visibility:visible}
 
-#primary_nav > li.haschild:hover:before{border-color: #ffe519 transparent transparent;border-style: solid;border-width: 8px 5px 4px;bottom:0px;content: " ";height: 10px;left: 40%;position: absolute;width: 10px;}
+/*#primary_nav > li.haschild:hover:before{border-color: #ffe519 transparent transparent;border-style: solid;border-width: 8px 5px 4px;bottom:0px;content: " ";height: 10px;left: 40%;position: absolute;width: 10px;}*/
 	
 #primary_nav  li.haschild > ul{width:220px;}
 #primary_nav > li.over ul,#primary_nav > li.over .nav-container{display:block;}
@@ -82,7 +82,7 @@ h6 strong{color:#262262;text-decoration:none;font:bold 15px;font-family: 'Roboto
 /*#primary_nav ul#nav > li ,#primary_nav ul#nav > li  > ul{display:block !important;}*/
 #primary_nav ul#nav li a{padding:0;}
 #primary_nav ul#nav > li > a{font:1.125em;font-family:'Roboto', sans-serif;margin-bottom:5px;}
-#primary_nav  > li > ul,#primary_nav ul#nav { border-top: 3px solid #ffe519;float: left;padding: 10px;width: 100%;}
+#primary_nav  > li > ul,#primary_nav ul#nav { border-top: 0px solid #ffe519;float: left;padding: 10px;width: 100%;}
 #primary_nav ul#nav.grid{padding:15px 0;}
 .top-serach-ps {position: relative; float:right;}
 .search-ab {float:left;width:100%}

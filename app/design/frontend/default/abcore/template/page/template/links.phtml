@@ -29,33 +29,29 @@
  * @see Mage_Page_Block_Template_Links
  */
 ?>
-     <script type="text/javascript" >
+<script type="text/javascript" >
         
-     function showminicart(){
-         // var a = document.getElementById('header-cart-top a').value;
-              document.getElementById('header-minicart').style.display='block';
-              document.getElementById('new-cart').className = "nosubbg";
-              document.getElementById('new-cart1').style.color='black';
-      }
-      function hideminicart(){
-          
-           document.getElementById('header-minicart').style.display='none';
-           document.getElementById('new-cart').className = "yessubbg";
-           document.getElementById('new-cart1').style.color='white';
-          
-      }
-        
-    
-       </script>
+  function showminicart(){
+  // var a = document.getElementById('header-cart-top a').value;
+      document.getElementById('header-minicart').style.display='block';
+      document.getElementById('new-cart').className = "nosubbg";
+  }
+  function hideminicart(){
+   document.getElementById('header-minicart').style.display='none';
+   document.getElementById('new-cart').className = "yessubbg";
+  }
+</script>
+
 <ul id="top-navigation-links" class="links">
-  <li><a href="<?php echo $this->getStoreUrl('customer/account/login/')?>">Sign Up</a></li>
-  <li><a href="<?php echo $this->getStoreUrl('customer/account/login/')?>">Log In</a></li>
+  <li><a href="<?php echo $this->getStoreUrl('customer/account/login/')?>"><?php echo $this->__('Sign Up')?></a></li>
+  <li><a href="<?php echo $this->getStoreUrl('customer/account/login/')?>"><?php echo $this->__('Log In')?></a></li>
   <li id="new-cart">
-          <a class="top-link-cart <?php echo ($count == 0)? 'no-items' : '';?>" id="new-cart1" onclick="showminicart()"  title="My Cart" href="javascript:void(0)">Cart  
-          <?php  $count = $this->helper('checkout/cart')->getSummaryCount();
-          if($count != 0){?>
-          <span class="itemscount"><?php echo $count;?></span>
-          <?php } ?>
+          <a class="top-link-cart <?php echo ($count == 0)? 'no-items' : '';?>" id="new-cart1" onclick="showminicart()"  title="My Cart" href="javascript:void(0)">
+            <?php  $count = $this->helper('checkout/cart')->getSummaryCount();?>
+            <img src="<?php echo $this->getSkinUrl('images/cart-icon.png')?>" alt="cart"/>
+            <?php if($count != 0){?>
+              <span class="itemscount">(<?php echo $count;?>)</span>
+              <?php } ?>
           </a>
   </li>     
 </ul>

@@ -32,64 +32,47 @@
 
 ?>
 <?php if ($this->getIsNeedToDisplaySideBar()):?>
-   <!-- <div class="smart-menu-top"></div>-->
-  <div class="block block-cart" id="header-minicart" style="display:none;   background: none repeat scroll 0 0 #000;
-    border: 1px solid yellow;  padding:20px 20px 0 0; position: absolute; left:47.5%;  top: 35px; width: 350px; z-index: 99999;">
- 
-		<?php $_cartQty = $this->getSummaryCount() ?>
-           
+	<?php $_cartQty = $this->getSummaryCount() ?>
+  	<div class="block block-cart cart-pop" id="header-minicart"> 
 		<div class="block-title-cart">
-			<strong><span style="padding-left:20px "><?php echo $this->__('Added to Cart') ?></span></strong>
-                        <span style="float:right; color: #FFFFFF;font-size: 14px;line-height: 30px; padding-right: 0px; "><?php echo Mage::helper('checkout/cart')->getCart()->getItemsCount();?> items</span>
+			<strong>
+				<span><?php echo $this->__('Added to Cart') ?></span>
+			</strong>
+            <span style="float:right; color: #FFFFFF;font-size: 14px;line-height: 30px; padding-right: 0px; "><?php echo Mage::helper('checkout/cart')->getCart()->getItemsCount();?> items</span>
 		</div>
-		<div class="block-content">
-		
+		<div class="block-content">		
 		<?php $_items = $this->getRecentItems() ?>
 		<?php if(count($_items)): ?>
-			
-			
 			<ol id="cart-sidebar" class="mini-products-list">
-			<?php foreach($_items as $_item): ?>
-				<?php echo $this->getItemHtml($_item) ?>
-			<?php endforeach; ?>
-			</ol>
-			
- 
-			
-	   <?php if ($_cartQty>0): ?>
-			<div class="summary">
-				<?php if ($_cartQty==1): ?>
-					<p class="amount"><?php echo $this->__('There is <a href="%s">1 item</a> in your cart.', $this->getUrl('checkout/cart')) ?></p>
-				<?php else: ?>
-					<p class="amount"><?php echo $this->__('There are <a href="%s">%s items</a> in your cart.', $this->getUrl('checkout/cart'), $_cartQty) ?></p>
-				<?php endif ?>
-				<p class="subtotal">
-					<span class="label"><?php echo $this->__('Sub Total:') ?></span> <?php echo Mage::helper('checkout')->formatPrice($this->getSubtotal()) ?>
-					<?php if ($_subtotalInclTax = $this->getSubtotalInclTax()): ?>
-						<br />(<?php echo Mage::helper('checkout')->formatPrice($_subtotalInclTax) ?> <?php echo Mage::helper('tax')->getIncExcText(true) ?>)
-					<?php endif; ?>
-				</p>
-			</div>
-		<?php endif ?>
-		<?php if($_cartQty && $this->isPossibleOnepageCheckout()): ?>
-		<div class="total-cart">
-		    <a href="<?php echo Mage::getUrl('checkout/cart') ?>"><?php echo $this->__('View Cart');?></a>
-	    </div>
-		<?php endif ?>
-			
-			
-			
-			
-			
-			
-			<script type="text/javascript">decorateList('cart-sidebar', 'none-recursive')</script>
+				<?php foreach($_items as $_item): ?>
+					<?php echo $this->getItemHtml($_item) ?>
+				<?php endforeach; ?>
+			</ol>	
+	   		<?php if ($_cartQty>0): ?>
+				<div class="summary">
+					<?php if ($_cartQty==1): ?>
+						<p class="amount"><?php echo $this->__('There is <a href="%s">1 item</a> in your cart.', $this->getUrl('checkout/cart')) ?></p>
+					<?php else: ?>
+						<p class="amount"><?php echo $this->__('There are <a href="%s">%s items</a> in your cart.', $this->getUrl('checkout/cart'), $_cartQty) ?></p>
+					<?php endif ?>
+					<p class="subtotal">
+						<span class="label"><?php echo $this->__('Sub Total:') ?></span> <?php echo Mage::helper('checkout')->formatPrice($this->getSubtotal()) ?>
+						<?php if ($_subtotalInclTax = $this->getSubtotalInclTax()): ?>
+							<br />(<?php echo Mage::helper('checkout')->formatPrice($_subtotalInclTax) ?> <?php echo Mage::helper('tax')->getIncExcText(true) ?>)
+						<?php endif; ?>
+					</p>
+				</div>
+			<?php endif ?>
+			<?php if($_cartQty && $this->isPossibleOnepageCheckout()): ?>
+				<div class="total-cart">
+				    <a href="<?php echo Mage::getUrl('checkout/cart') ?>"><?php echo $this->__('View Cart');?></a>
+			    </div>
+			<?php endif ?>
 		<?php else: ?> 
-                        
 			<p class="empty"><?php echo $this->__('You have no items in your shopping cart.') ?></p>
 		<?php endif ?>
+		<div class="btn-close" onclick="hideminicart()">Close x</div>
 		</div>
-          <div style="float:left;background:#ffe100;padding:4px 10px;cursor:pointer;margin-top:0px;margin-right:0px;font-size:13px;font-weight:bold; margin-left: -10px;" onclick="hideminicart()">Close x</div>
-  
 	</div>
-	<!--<div class="smart-menu-bottom"></div>-->
 <?php endif;?>
+<script type="text/javascript">decorateList('cart-sidebar', 'none-recursive')</script>
